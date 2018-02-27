@@ -27,7 +27,7 @@ namespace BookShop.GUI
         #region LoadForm
         private void LoadSanPham()
         {
-            var listMatHang = db.MATHANGs.OrderBy(p => p.LOAISP).ToList();
+            var listMatHang = db.MATHANGs.ToList();
 
             panelMatHang.Controls.Clear();
             foreach (var item in listMatHang)

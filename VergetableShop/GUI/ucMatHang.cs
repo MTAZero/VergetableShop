@@ -44,20 +44,12 @@ namespace BookShop.GUI
             imgAnh.Tag = this.Tag;
             txtTen.Tag = this.Tag;
 
-            if (tg.LOAISP == 0)
-            {
-                SACH k = db.SACHes.Where(p => p.ID == tg.SACHID).First();
-                /// Nếu là sách
-                txtTen.Text = k.TEN;
-                imgAnh.Image = Helper.byteArrayToImage(k.ANH);
-            }
-            else
-            {
-                /// nếu là văn phòng phẩm
-                VANPHONGPHAM vpp = db.VANPHONGPHAMs.Where(p => p.ID == tg.VANPHONGPHAMID).First();
-                txtTen.Text = vpp.TEN;
-                imgAnh.Image = Helper.byteArrayToImage(vpp.ANH);
-            }
+            MATHANG k = db.MATHANGs.Where(p => p.ID == tg.ID).First();
+            k = tg;
+            /// Nếu là sách
+            txtTen.Text = k.TEN;
+            imgAnh.Image = Helper.byteArrayToImage(k.ANH);
+
         }
     }
 }

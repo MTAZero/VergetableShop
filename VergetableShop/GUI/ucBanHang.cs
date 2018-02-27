@@ -40,7 +40,7 @@ namespace BookShop.GUI
             txtTongGiaTri.Text = "Tổng giá trị : 0";
             try
             {
-                dgvHoaDonMain.DataSource = db.HOADONBANs.ToList()
+                dgvHoaDonMain.DataSource = db.HOADONs.ToList()
                                            .Where(p => p.NGAY >= dateBatDau.DateTime && p.NGAY <= dateKetThuc.DateTime)
                                            .OrderBy(p => p.NGAY)
                                            .Select(p => new
@@ -55,7 +55,7 @@ namespace BookShop.GUI
                                            .ToList();
 
                 txtTongGiaTri.Text = "Tổng giá trị : " +
-                                     ((int)db.HOADONBANs.ToList()
+                                     ((int)db.HOADONs.ToList()
                                            .Where(p => p.NGAY >= dateBatDau.DateTime && p.NGAY <= dateKetThuc.DateTime)
                                            .OrderBy(p => p.NGAY)
                                            .Select(p => new
@@ -80,10 +80,10 @@ namespace BookShop.GUI
             try
             {
                 int ID = (int)dgvHoaDon.GetFocusedRowCellValue("ID");
-                HOADONBAN hd = db.HOADONBANs.Where(p => p.ID == ID).FirstOrDefault();
+                HOADON hd = db.HOADONs.Where(p => p.ID == ID).FirstOrDefault();
 
                 int i = 0;
-                dgvChiTietHoaDonMain.DataSource = db.CHITIETHOADONs.Where(p => p.HOADONBANID == hd.ID).ToList()
+                dgvChiTietHoaDonMain.DataSource = db.CHITIETHOADONs.Where(p => p.HOADONID == hd.ID).ToList()
                                                 .Select(p => new
                                                 {
                                                     ID = p.ID,
@@ -124,7 +124,7 @@ namespace BookShop.GUI
             try
             {
                 int ID = (int)dgvHoaDon.GetFocusedRowCellValue("ID");
-                HOADONBAN hd = db.HOADONBANs.Where(p => p.ID == ID).FirstOrDefault();
+                HOADON hd = db.HOADONs.Where(p => p.ID == ID).FirstOrDefault();
 
                 txtMaHoaDon.Text = hd.MAHOADON;
                 dateNgayBan.Text = ((DateTime)hd.NGAY).ToString("dd/MM/yyyy");
@@ -144,7 +144,7 @@ namespace BookShop.GUI
             try
             {
                 int ID = (int)dgvHoaDon.GetFocusedRowCellValue("ID");
-                HOADONBAN hd = db.HOADONBANs.Where(p => p.ID == ID).FirstOrDefault();
+                HOADON hd = db.HOADONs.Where(p => p.ID == ID).FirstOrDefault();
                 FrmRpHoaDon form = new FrmRpHoaDon(hd);
                 form.ShowDialog();
             }

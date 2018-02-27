@@ -64,8 +64,7 @@ namespace BookShop
         {
             string ans = "";
 
-            if (a.LOAISP == 0) return db.SACHes.Where(p => p.ID == a.SACHID).FirstOrDefault().TEN;
-            if (a.LOAISP == 1) return db.VANPHONGPHAMs.Where(p => p.ID == a.VANPHONGPHAMID).FirstOrDefault().TEN;
+            ans = a.TEN;
 
             return ans;
         }
@@ -74,7 +73,7 @@ namespace BookShop
         {
             int ans = (
                         from chitiet in db.CHITIETHOADONs.Where(p => p.MATHANGID == a.ID).ToList()
-                        from hoadon in db.HOADONBANs.Where(p =>p.ID == chitiet.HOADONBANID && p.NGAY >= batdau && p.NGAY <= ketthuc).ToList()
+                        from hoadon in db.HOADONs.Where(p =>p.ID == chitiet.HOADONID && p.NGAY >= batdau && p.NGAY <= ketthuc).ToList()
                         select chitiet
                       )
                       .ToList()
@@ -87,8 +86,7 @@ namespace BookShop
         {
             int ans = 0;
 
-            if (a.LOAISP == 0) return (int)db.SACHes.Where(p => p.ID == a.SACHID).FirstOrDefault().GIABAN;
-            if (a.LOAISP == 1) return (int)db.VANPHONGPHAMs.Where(p => p.ID == a.VANPHONGPHAMID).FirstOrDefault().GIABAN;
+            ans = (int) a.GIABAN;
 
             return ans;
         }
