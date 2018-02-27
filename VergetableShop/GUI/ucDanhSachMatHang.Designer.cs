@@ -312,7 +312,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbxNhaCungCap.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cbxNhaCungCap.Properties.ShowHeader = false;
-            this.cbxNhaCungCap.Size = new System.Drawing.Size(247, 26);
+            this.cbxNhaCungCap.Size = new System.Drawing.Size(344, 26);
             this.cbxNhaCungCap.TabIndex = 4;
             // 
             // cbxNhaSanXuat
@@ -329,7 +329,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbxNhaSanXuat.Properties.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.cbxNhaSanXuat.Properties.ShowHeader = false;
-            this.cbxNhaSanXuat.Size = new System.Drawing.Size(247, 26);
+            this.cbxNhaSanXuat.Size = new System.Drawing.Size(344, 26);
             this.cbxNhaSanXuat.TabIndex = 2;
             // 
             // txtNamXuatBan
