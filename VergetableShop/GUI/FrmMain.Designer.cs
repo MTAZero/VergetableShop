@@ -38,7 +38,6 @@
             this.barNhaXuatBan = new DevExpress.XtraBars.BarButtonItem();
             this.barTacGia = new DevExpress.XtraBars.BarButtonItem();
             this.barSach = new DevExpress.XtraBars.BarButtonItem();
-            this.barVanPhongPham = new DevExpress.XtraBars.BarButtonItem();
             this.barNhapHang = new DevExpress.XtraBars.BarButtonItem();
             this.barBanHang = new DevExpress.XtraBars.BarButtonItem();
             this.barTimKiemSach = new DevExpress.XtraBars.BarButtonItem();
@@ -60,7 +59,6 @@
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.pageQuanTri = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -98,7 +96,6 @@
             this.barNhaXuatBan,
             this.barTacGia,
             this.barSach,
-            this.barVanPhongPham,
             this.barNhapHang,
             this.barBanHang,
             this.barTimKiemSach,
@@ -134,7 +131,7 @@
             // 
             // barTheLoai
             // 
-            this.barTheLoai.Caption = "Thể loại";
+            this.barTheLoai.Caption = "Nhà cung cấp";
             this.barTheLoai.Glyph = ((System.Drawing.Image)(resources.GetObject("barTheLoai.Glyph")));
             this.barTheLoai.Id = 2;
             this.barTheLoai.Name = "barTheLoai";
@@ -143,7 +140,7 @@
             // 
             // barNhaXuatBan
             // 
-            this.barNhaXuatBan.Caption = "Nhà xuất bản";
+            this.barNhaXuatBan.Caption = "Nhà sản xuất";
             this.barNhaXuatBan.Glyph = ((System.Drawing.Image)(resources.GetObject("barNhaXuatBan.Glyph")));
             this.barNhaXuatBan.Id = 3;
             this.barNhaXuatBan.Name = "barNhaXuatBan";
@@ -161,21 +158,12 @@
             // 
             // barSach
             // 
-            this.barSach.Caption = "Sách";
+            this.barSach.Caption = "Mặt hàng";
             this.barSach.Glyph = ((System.Drawing.Image)(resources.GetObject("barSach.Glyph")));
             this.barSach.Id = 5;
             this.barSach.Name = "barSach";
             this.barSach.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barSach_ItemClick);
-            // 
-            // barVanPhongPham
-            // 
-            this.barVanPhongPham.Caption = "Văn phòng phẩm";
-            this.barVanPhongPham.Glyph = ((System.Drawing.Image)(resources.GetObject("barVanPhongPham.Glyph")));
-            this.barVanPhongPham.Id = 6;
-            this.barVanPhongPham.Name = "barVanPhongPham";
-            this.barVanPhongPham.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.barVanPhongPham.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barVanPhongPham_ItemClick);
             // 
             // barNhapHang
             // 
@@ -197,7 +185,7 @@
             // 
             // barTimKiemSach
             // 
-            this.barTimKiemSach.Caption = "Tìm kiếm sách";
+            this.barTimKiemSach.Caption = "Tìm kiếm";
             this.barTimKiemSach.Glyph = ((System.Drawing.Image)(resources.GetObject("barTimKiemSach.Glyph")));
             this.barTimKiemSach.Id = 10;
             this.barTimKiemSach.Name = "barTimKiemSach";
@@ -341,7 +329,6 @@
             // 
             this.pageQuanTri.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2,
-            this.ribbonPageGroup3,
             this.ribbonPageGroup1});
             this.pageQuanTri.Name = "pageQuanTri";
             this.pageQuanTri.Text = "Quản trị";
@@ -352,15 +339,9 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.barTheLoai);
             this.ribbonPageGroup2.ItemLinks.Add(this.barNhaXuatBan);
             this.ribbonPageGroup2.ItemLinks.Add(this.barTacGia);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barSach);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Danh mục";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barSach);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barVanPhongPham);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "Sản phẩm";
             // 
             // ribbonPageGroup1
             // 
@@ -425,8 +406,6 @@
         private DevExpress.XtraBars.BarButtonItem barNhaXuatBan;
         private DevExpress.XtraBars.BarButtonItem barTacGia;
         private DevExpress.XtraBars.BarButtonItem barSach;
-        private DevExpress.XtraBars.BarButtonItem barVanPhongPham;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem barNhapHang;
         private DevExpress.XtraBars.BarButtonItem barBanHang;

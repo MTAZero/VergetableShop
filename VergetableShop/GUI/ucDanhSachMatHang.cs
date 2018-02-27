@@ -64,14 +64,14 @@ namespace BookShop.GUI
 
         private void ClearControl()
         {
-            cbxNXB.ItemIndex = 0;
+            //cbxNXB.ItemIndex = 0;
             cbxNhaSanXuat.ItemIndex = 0;
             cbxNhaCungCap.ItemIndex = 0;
 
             txtTenMATHANG.Text = "";
             txtGiaBan.Text = "";
             txtNamXuatBan.Text = "";
-            txtThongTinMATHANG.Text = "";
+            //txtThongTinMATHANG.Text = "";
             txtTitleTacGia.Text = "";
             txtTitleTenMATHANG.Text = "";
 
@@ -109,11 +109,11 @@ namespace BookShop.GUI
         {
             txtTenMATHANG.Enabled = false;
             cbxNhaSanXuat.Enabled = false;
-            cbxNXB.Enabled = false;
+            //cbxNXB.Enabled = false;
             cbxNhaCungCap.Enabled = false;
             txtGiaBan.Enabled = false;
             txtNamXuatBan.Enabled = false;
-            txtThongTinMATHANG.Enabled = false;
+            //txtThongTinMATHANG.Enabled = false;
             imgAnh.Enabled = false;
 
             dgvMATHANGMain.Enabled = true;
@@ -128,11 +128,11 @@ namespace BookShop.GUI
         {
             txtTenMATHANG.Enabled = true;
             cbxNhaSanXuat.Enabled = true;
-            cbxNXB.Enabled = true;
+           // cbxNXB.Enabled = true;
             cbxNhaCungCap.Enabled = true;
             txtGiaBan.Enabled = true;
             txtNamXuatBan.Enabled = true;
-            txtThongTinMATHANG.Enabled = true;
+            //txtThongTinMATHANG.Enabled = true;
             imgAnh.Enabled = true;
 
             dgvMATHANGMain.Enabled = false;
