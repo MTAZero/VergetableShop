@@ -26,12 +26,12 @@ namespace BookShop.GUI
 
         #region LoadForm
 
-        private void LoadTheLoai()
+        private void LoadNHACUNGCAP()
         {
-            panelTheLoai.Controls.Clear();
+            panelNHACUNGCAP.Controls.Clear();
 
-            var listTheLoai = db.THELOAIs.ToList();
-            foreach (var item in listTheLoai)
+            var listNHACUNGCAP = db.NHACUNGCAPs.ToList();
+            foreach (var item in listNHACUNGCAP)
             {
                 CheckBox ich = new CheckBox();
                 ich.Tag = item.ID;
@@ -40,16 +40,16 @@ namespace BookShop.GUI
                 ich.Size = new System.Drawing.Size(180, 21);
                 ich.CheckedChanged += LoadSach;
                 ich.Checked = true;
-                panelTheLoai.Controls.Add(ich);
+                panelNHACUNGCAP.Controls.Add(ich);
             }
         }
 
-        private void LoadTacGia()
+        private void LoadNHASANXUAT()
         {
-            panelTacGia.Controls.Clear();
+            panelNHASANXUAT.Controls.Clear();
 
-            var listTacGia = db.TACGIAs.ToList();
-            foreach (var item in listTacGia)
+            var listNHASANXUAT = db.NHASANXUATs.ToList();
+            foreach (var item in listNHASANXUAT)
             {
                 CheckBox ich = new CheckBox();
                 ich.Tag = item.ID;
@@ -58,88 +58,50 @@ namespace BookShop.GUI
                 ich.Size = new System.Drawing.Size(180, 21);
                 ich.Checked = true;
                 ich.CheckedChanged += LoadSach;
-                panelTacGia.Controls.Add(ich);
-            }
-        }
-
-        private void LoadNXB()
-        {
-            panelNhaXuatBan.Controls.Clear();
-
-            var listNXB = db.NXBs.ToList();
-            foreach (var item in listNXB)
-            {
-                CheckBox ich = new CheckBox();
-                ich.Tag = item.ID;
-                ich.Text = item.TEN;
-                ich.AutoSize = false;
-                ich.Size = new System.Drawing.Size(180, 21);
-                ich.Checked = true;
-                ich.CheckedChanged += LoadSach;
-                panelNhaXuatBan.Controls.Add(ich);
+                panelNHASANXUAT.Controls.Add(ich);
             }
         }
 
         private void DisplayListSach()
         {
-            var listSach = db.SACHes.ToList();
+            var listSach = db.MATHANGs.ToList();
 
             /// Getlist tác giả được chọn
-            var listTacGia = new List<TACGIA>();
-            foreach (var item in panelTacGia.Controls)
+            var listNHASANXUAT = new List<NHASANXUAT>();
+            foreach (var item in panelNHASANXUAT.Controls)
             {
                 var iz = item as CheckBox;
 
                 if (iz.Checked)
                 {
-                    TACGIA tg = db.TACGIAs.Where(p => p.ID == (int)iz.Tag).First();
-                    listTacGia.Add(tg);
+                    NHASANXUAT tg = db.NHASANXUATs.Where(p => p.ID == (int)iz.Tag).First();
+                    listNHASANXUAT.Add(tg);
                 }
             }
             listSach = (
                         from sach in listSach
-                        from tacgia in listTacGia
-                        where sach.TACGIAID == tacgia.ID
+                        from NHASANXUAT in listNHASANXUAT
+                        where sach.NHASANXUATID == NHASANXUAT.ID
                         select sach
                        )
                        .ToList();
 
             /// Getlist thể loại được chọn
-            var listTheLoai = new List<THELOAI>();
-            foreach (var item in panelTheLoai.Controls)
+            var listNHACUNGCAP = new List<NHACUNGCAP>();
+            foreach (var item in panelNHACUNGCAP.Controls)
             {
                 var iz = item as CheckBox;
 
                 if (iz.Checked)
                 {
-                    THELOAI tg = db.THELOAIs.Where(p => p.ID == (int)iz.Tag).First();
-                    listTheLoai.Add(tg);
+                    NHACUNGCAP tg = db.NHACUNGCAPs.Where(p => p.ID == (int)iz.Tag).First();
+                    listNHACUNGCAP.Add(tg);
                 }
             }
             listSach = (
                         from sach in listSach
-                        from theloai in listTheLoai
-                        where sach.THELOAIID == theloai.ID
-                        select sach
-                       )
-                       .ToList();
-
-            /// Getlist nhà xuất bản được chọn
-            var listNXB = new List<NXB>();
-            foreach (var item in panelNhaXuatBan.Controls)
-            {
-                var iz = item as CheckBox;
-
-                if (iz.Checked)
-                {
-                    NXB tg = db.NXBs.Where(p => p.ID == (int)iz.Tag).First();
-                    listNXB.Add(tg);
-                }
-            }
-            listSach = (
-                        from sach in listSach
-                        from nxb in listNXB
-                        where sach.NXBID == nxb.ID
+                        from NHACUNGCAP in listNHACUNGCAP
+                        where sach.NHACUNGCAPID == NHACUNGCAP.ID
                         select sach
                        )
                        .ToList();
@@ -161,9 +123,9 @@ namespace BookShop.GUI
 
         private void ucTimKiemSach_Load(object sender, EventArgs e)
         {
-            LoadTheLoai();
-            LoadTacGia();
-            LoadNXB();
+            LoadNHACUNGCAP();
+            LoadNHASANXUAT();
+            //LoadNXB();
             DisplayListSach();
         }
         #endregion

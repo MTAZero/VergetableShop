@@ -13,10 +13,10 @@ namespace BookShop.GUI
 {
     public partial class ucSach : UserControl
     {
-        private SACH tg = new SACH();
+        private MATHANG tg = new MATHANG();
 
         #region Load
-        public ucSach(SACH z)
+        public ucSach(MATHANG z)
         {
             InitializeComponent();
             tg = z;

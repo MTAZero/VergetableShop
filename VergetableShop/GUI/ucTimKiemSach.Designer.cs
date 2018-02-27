@@ -35,8 +35,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.panelTheLoai = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelTacGia = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelNHACUNGCAP = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelNHASANXUAT = new System.Windows.Forms.FlowLayoutPanel();
             this.panelNhaXuatBan = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -98,7 +98,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.panelTheLoai);
+            this.groupBox3.Controls.Add(this.panelNHACUNGCAP);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(3, 38);
             this.groupBox3.Name = "groupBox3";
@@ -109,7 +109,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.panelTacGia);
+            this.groupBox4.Controls.Add(this.panelNHASANXUAT);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox4.Location = new System.Drawing.Point(3, 199);
             this.groupBox4.Name = "groupBox4";
@@ -129,23 +129,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nhà xuất bản";
             // 
-            // panelTheLoai
+            // panelNHACUNGCAP
             // 
-            this.panelTheLoai.AutoScroll = true;
-            this.panelTheLoai.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelTheLoai.Location = new System.Drawing.Point(3, 20);
-            this.panelTheLoai.Name = "panelTheLoai";
-            this.panelTheLoai.Size = new System.Drawing.Size(404, 138);
-            this.panelTheLoai.TabIndex = 0;
+            this.panelNHACUNGCAP.AutoScroll = true;
+            this.panelNHACUNGCAP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelNHACUNGCAP.Location = new System.Drawing.Point(3, 20);
+            this.panelNHACUNGCAP.Name = "panelNHACUNGCAP";
+            this.panelNHACUNGCAP.Size = new System.Drawing.Size(404, 138);
+            this.panelNHACUNGCAP.TabIndex = 0;
             // 
-            // panelTacGia
+            // panelNHASANXUAT
             // 
-            this.panelTacGia.AutoScroll = true;
-            this.panelTacGia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelTacGia.Location = new System.Drawing.Point(3, 20);
-            this.panelTacGia.Name = "panelTacGia";
-            this.panelTacGia.Size = new System.Drawing.Size(404, 140);
-            this.panelTacGia.TabIndex = 1;
+            this.panelNHASANXUAT.AutoScroll = true;
+            this.panelNHASANXUAT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelNHASANXUAT.Location = new System.Drawing.Point(3, 20);
+            this.panelNHASANXUAT.Name = "panelNHASANXUAT";
+            this.panelNHASANXUAT.Size = new System.Drawing.Size(404, 140);
+            this.panelNHASANXUAT.TabIndex = 1;
             // 
             // panelNhaXuatBan
             // 
@@ -191,8 +191,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.FlowLayoutPanel panelTheLoai;
-        private System.Windows.Forms.FlowLayoutPanel panelTacGia;
+        private System.Windows.Forms.FlowLayoutPanel panelNHACUNGCAP;
+        private System.Windows.Forms.FlowLayoutPanel panelNHASANXUAT;
         private System.Windows.Forms.FlowLayoutPanel panelNhaXuatBan;
         private System.Windows.Forms.Panel panel2;
     }
