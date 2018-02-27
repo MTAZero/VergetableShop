@@ -168,7 +168,7 @@
             // 
             // Ten
             // 
-            this.Ten.Caption = "Tên sách";
+            this.Ten.Caption = "Mặt hàng";
             this.Ten.FieldName = "Ten";
             this.Ten.Name = "Ten";
             this.Ten.Visible = true;
