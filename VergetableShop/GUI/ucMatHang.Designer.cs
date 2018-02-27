@@ -62,9 +62,9 @@
             // 
             this.imgAnh.BackColor = System.Drawing.Color.White;
             this.imgAnh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.imgAnh.Location = new System.Drawing.Point(36, 3);
+            this.imgAnh.Location = new System.Drawing.Point(6, 3);
             this.imgAnh.Name = "imgAnh";
-            this.imgAnh.Size = new System.Drawing.Size(80, 120);
+            this.imgAnh.Size = new System.Drawing.Size(136, 120);
             this.imgAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgAnh.TabIndex = 4;
             this.imgAnh.TabStop = false;

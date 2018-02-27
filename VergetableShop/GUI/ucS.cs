@@ -11,12 +11,12 @@ using BookShop.Model;
 
 namespace BookShop.GUI
 {
-    public partial class ucSach : UserControl
+    public partial class ucS : UserControl
     {
         private MATHANG tg = new MATHANG();
 
         #region Load
-        public ucSach(MATHANG z)
+        public ucS(MATHANG z)
         {
             InitializeComponent();
             tg = z;

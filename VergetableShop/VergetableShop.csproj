@@ -185,11 +185,11 @@
     <Compile Include="GUI\ucMatHang.Designer.cs">
       <DependentUpon>ucMatHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ucSach.cs">
+    <Compile Include="GUI\ucS.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\ucSach.Designer.cs">
-      <DependentUpon>ucSach.cs</DependentUpon>
+    <Compile Include="GUI\ucS.Designer.cs">
+      <DependentUpon>ucS.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ucThongKeBanHang.cs">
       <SubType>UserControl</SubType>
@@ -197,11 +197,11 @@
     <Compile Include="GUI\ucThongKeBanHang.Designer.cs">
       <DependentUpon>ucThongKeBanHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ucTimKiemSach.cs">
+    <Compile Include="GUI\ucTimKiemMatHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\ucTimKiemSach.Designer.cs">
-      <DependentUpon>ucTimKiemSach.cs</DependentUpon>
+    <Compile Include="GUI\ucTimKiemMatHang.Designer.cs">
+      <DependentUpon>ucTimKiemMatHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="Model\CHITIETHOADON.cs" />
@@ -283,14 +283,14 @@
     <EmbeddedResource Include="GUI\ucMatHang.resx">
       <DependentUpon>ucMatHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ucSach.resx">
-      <DependentUpon>ucSach.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ucS.resx">
+      <DependentUpon>ucS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucThongKeBanHang.resx">
       <DependentUpon>ucThongKeBanHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ucTimKiemSach.resx">
-      <DependentUpon>ucTimKiemSach.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ucTimKiemMatHang.resx">
+      <DependentUpon>ucTimKiemMatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -82,7 +82,7 @@ namespace BookShop.GUI
         private void barTimKiemSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             panelMain.Controls.Clear();
-            ucTimKiemSach uc = new ucTimKiemSach();
+            ucTimKiemMatHang uc = new ucTimKiemMatHang();
             uc.Dock = DockStyle.Fill;
             panelMain.Controls.Add(uc);
         }

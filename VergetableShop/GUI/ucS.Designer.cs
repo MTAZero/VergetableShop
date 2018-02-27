@@ -1,6 +1,6 @@
 ﻿namespace BookShop.GUI
 {
-    partial class ucSach
+    partial class ucS
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.imgAnh = new System.Windows.Forms.PictureBox();
-            this.txtTenSach = new System.Windows.Forms.Label();
             this.txtGiaBan = new System.Windows.Forms.Label();
+            this.txtTenSach = new System.Windows.Forms.Label();
+            this.imgAnh = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).BeginInit();
             this.SuspendLayout();
@@ -49,17 +49,16 @@
             this.panel1.Size = new System.Drawing.Size(153, 171);
             this.panel1.TabIndex = 0;
             // 
-            // imgAnh
+            // txtGiaBan
             // 
-            this.imgAnh.BackColor = System.Drawing.Color.White;
-            this.imgAnh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.imgAnh.Location = new System.Drawing.Point(36, 3);
-            this.imgAnh.Name = "imgAnh";
-            this.imgAnh.Size = new System.Drawing.Size(80, 120);
-            this.imgAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgAnh.TabIndex = 4;
-            this.imgAnh.TabStop = false;
-            this.imgAnh.WaitOnLoad = true;
+            this.txtGiaBan.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiaBan.ForeColor = System.Drawing.Color.Black;
+            this.txtGiaBan.Location = new System.Drawing.Point(6, 147);
+            this.txtGiaBan.Name = "txtGiaBan";
+            this.txtGiaBan.Size = new System.Drawing.Size(136, 18);
+            this.txtGiaBan.TabIndex = 8;
+            this.txtGiaBan.Text = "199 000";
+            this.txtGiaBan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtTenSach
             // 
@@ -72,16 +71,17 @@
             this.txtTenSach.Text = "Tôi thấy hoa vàng trên cỏ xanh";
             this.txtTenSach.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtGiaBan
+            // imgAnh
             // 
-            this.txtGiaBan.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiaBan.ForeColor = System.Drawing.Color.Black;
-            this.txtGiaBan.Location = new System.Drawing.Point(6, 147);
-            this.txtGiaBan.Name = "txtGiaBan";
-            this.txtGiaBan.Size = new System.Drawing.Size(136, 18);
-            this.txtGiaBan.TabIndex = 8;
-            this.txtGiaBan.Text = "199 000";
-            this.txtGiaBan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.imgAnh.BackColor = System.Drawing.Color.White;
+            this.imgAnh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.imgAnh.Location = new System.Drawing.Point(9, 3);
+            this.imgAnh.Name = "imgAnh";
+            this.imgAnh.Size = new System.Drawing.Size(133, 120);
+            this.imgAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgAnh.TabIndex = 4;
+            this.imgAnh.TabStop = false;
+            this.imgAnh.WaitOnLoad = true;
             // 
             // ucSach
             // 

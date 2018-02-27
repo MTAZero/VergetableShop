@@ -11,12 +11,12 @@ using BookShop.Model;
 
 namespace BookShop.GUI
 {
-    public partial class ucTimKiemSach : UserControl
+    public partial class ucTimKiemMatHang : UserControl
     {
         private VergetableContext db = Helper.db;
 
         #region Hàm khởi tạo
-        public ucTimKiemSach()
+        public ucTimKiemMatHang()
         {
             InitializeComponent();
             Helper.Reload();
@@ -37,7 +37,7 @@ namespace BookShop.GUI
                 ich.Tag = item.ID;
                 ich.Text = item.TEN;
                 ich.AutoSize = false;
-                ich.Size = new System.Drawing.Size(180, 21);
+                ich.Size = new System.Drawing.Size(350, 21);
                 ich.CheckedChanged += LoadSach;
                 ich.Checked = true;
                 panelNHACUNGCAP.Controls.Add(ich);
@@ -55,7 +55,7 @@ namespace BookShop.GUI
                 ich.Tag = item.ID;
                 ich.Text = item.TEN;
                 ich.AutoSize = false;
-                ich.Size = new System.Drawing.Size(180, 21);
+                ich.Size = new System.Drawing.Size(350, 21);
                 ich.Checked = true;
                 ich.CheckedChanged += LoadSach;
                 panelNHASANXUAT.Controls.Add(ich);
@@ -110,7 +110,7 @@ namespace BookShop.GUI
             panelSach.Controls.Clear();
             foreach (var item in listSach)
             {
-                ucSach z = new ucSach(item);
+                ucS z = new ucS(item);
                 panelSach.Controls.Add(z);
             }
 
