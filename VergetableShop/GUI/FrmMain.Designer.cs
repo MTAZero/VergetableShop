@@ -36,7 +36,6 @@
             this.barNhanVien = new DevExpress.XtraBars.BarButtonItem();
             this.barTheLoai = new DevExpress.XtraBars.BarButtonItem();
             this.barNhaXuatBan = new DevExpress.XtraBars.BarButtonItem();
-            this.barTacGia = new DevExpress.XtraBars.BarButtonItem();
             this.barSach = new DevExpress.XtraBars.BarButtonItem();
             this.barNhapHang = new DevExpress.XtraBars.BarButtonItem();
             this.barBanHang = new DevExpress.XtraBars.BarButtonItem();
@@ -94,7 +93,6 @@
             this.barNhanVien,
             this.barTheLoai,
             this.barNhaXuatBan,
-            this.barTacGia,
             this.barSach,
             this.barNhapHang,
             this.barBanHang,
@@ -146,15 +144,6 @@
             this.barNhaXuatBan.Name = "barNhaXuatBan";
             this.barNhaXuatBan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barNhaXuatBan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barNhaXuatBan_ItemClick);
-            // 
-            // barTacGia
-            // 
-            this.barTacGia.Caption = "Tác giả";
-            this.barTacGia.Glyph = ((System.Drawing.Image)(resources.GetObject("barTacGia.Glyph")));
-            this.barTacGia.Id = 4;
-            this.barTacGia.Name = "barTacGia";
-            this.barTacGia.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.barTacGia.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barTacGia_ItemClick);
             // 
             // barSach
             // 
@@ -338,7 +327,6 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.barNhanVien);
             this.ribbonPageGroup2.ItemLinks.Add(this.barTheLoai);
             this.ribbonPageGroup2.ItemLinks.Add(this.barNhaXuatBan);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barTacGia);
             this.ribbonPageGroup2.ItemLinks.Add(this.barSach);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Danh mục";
@@ -367,9 +355,9 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(18, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 16);
+            this.label1.Size = new System.Drawing.Size(172, 16);
             this.label1.TabIndex = 3;
-            this.label1.Text = "QUẢN LÝ NHÀ SÁCH";
+            this.label1.Text = "Quản lý cửa hàng rau củ quả";
             // 
             // FrmMain
             // 
@@ -404,7 +392,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarButtonItem barTheLoai;
         private DevExpress.XtraBars.BarButtonItem barNhaXuatBan;
-        private DevExpress.XtraBars.BarButtonItem barTacGia;
         private DevExpress.XtraBars.BarButtonItem barSach;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem barNhapHang;

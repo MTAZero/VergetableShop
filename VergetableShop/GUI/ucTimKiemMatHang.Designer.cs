@@ -36,7 +36,6 @@
             this.panelNHACUNGCAP = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.panelNHASANXUAT = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -84,7 +83,6 @@
             // 
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(416, 530);
@@ -96,12 +94,12 @@
             // 
             this.groupBox3.Controls.Add(this.panelNHACUNGCAP);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(3, 38);
+            this.groupBox3.Location = new System.Drawing.Point(3, 20);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(410, 218);
+            this.groupBox3.Size = new System.Drawing.Size(410, 236);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Thể loại";
+            this.groupBox3.Text = "Nhà cung cấp";
             // 
             // panelNHACUNGCAP
             // 
@@ -109,7 +107,7 @@
             this.panelNHACUNGCAP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNHACUNGCAP.Location = new System.Drawing.Point(3, 20);
             this.panelNHACUNGCAP.Name = "panelNHACUNGCAP";
-            this.panelNHACUNGCAP.Size = new System.Drawing.Size(404, 195);
+            this.panelNHACUNGCAP.Size = new System.Drawing.Size(404, 213);
             this.panelNHACUNGCAP.TabIndex = 0;
             // 
             // groupBox4
@@ -121,7 +119,7 @@
             this.groupBox4.Size = new System.Drawing.Size(410, 271);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Tác giả";
+            this.groupBox4.Text = "Nhà sản xuất";
             // 
             // panelNHASANXUAT
             // 
@@ -132,20 +130,12 @@
             this.panelNHASANXUAT.Size = new System.Drawing.Size(404, 248);
             this.panelNHASANXUAT.TabIndex = 1;
             // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 20);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(410, 18);
-            this.panel2.TabIndex = 0;
-            // 
-            // ucTimKiemSach
+            // ucTimKiemMatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Name = "ucTimKiemSach";
+            this.Name = "ucTimKiemMatHang";
             this.Size = new System.Drawing.Size(1308, 548);
             this.Load += new System.EventHandler(this.ucTimKiemSach_Load);
             this.panel1.ResumeLayout(false);
@@ -167,6 +157,5 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.FlowLayoutPanel panelNHACUNGCAP;
         private System.Windows.Forms.FlowLayoutPanel panelNHASANXUAT;
-        private System.Windows.Forms.Panel panel2;
     }
 }
