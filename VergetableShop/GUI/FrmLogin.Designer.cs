@@ -33,15 +33,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
-            this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -86,6 +86,32 @@
             this.panel2.Size = new System.Drawing.Size(372, 168);
             this.panel2.TabIndex = 0;
             // 
+            // btnHuy
+            // 
+            this.btnHuy.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.btnHuy.Appearance.Options.UseFont = true;
+            this.btnHuy.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.Location = new System.Drawing.Point(224, 111);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(100, 34);
+            this.btnHuy.TabIndex = 5;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.btnDangNhap.Appearance.Options.UseFont = true;
+            this.btnDangNhap.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.btnDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.Image")));
+            this.btnDangNhap.Location = new System.Drawing.Point(113, 111);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(100, 34);
+            this.btnDangNhap.TabIndex = 4;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(113, 72);
@@ -119,56 +145,31 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tài khoản : ";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(125, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(182, 140);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(109, 133);
+            this.label1.Location = new System.Drawing.Point(24, 146);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 27);
+            this.label1.Size = new System.Drawing.Size(390, 27);
             this.label1.TabIndex = 0;
-            this.label1.Text = "NHÀ SÁCH FAHASA";
+            this.label1.Text = "QUẢN LÝ CỬA HÀNG RAU CỦ QUẢ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // defaultLookAndFeel1
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Light";
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.btnHuy.Appearance.Options.UseFont = true;
-            this.btnHuy.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(224, 111);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(100, 34);
-            this.btnHuy.TabIndex = 5;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // btnDangNhap
-            // 
-            this.btnDangNhap.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.btnDangNhap.Appearance.Options.UseFont = true;
-            this.btnDangNhap.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.btnDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.Image")));
-            this.btnDangNhap.Location = new System.Drawing.Point(113, 111);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(100, 34);
-            this.btnDangNhap.TabIndex = 4;
-            this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BookShop.Properties.Resources._62be20f0009610a74b37f3364260f35b;
-            this.pictureBox1.Location = new System.Drawing.Point(167, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(106, 106);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // FrmLogin
             // 

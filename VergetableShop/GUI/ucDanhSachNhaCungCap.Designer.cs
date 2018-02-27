@@ -127,7 +127,7 @@
             this.groupBox2.Size = new System.Drawing.Size(576, 97);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Chi tiết nhà xuất bản";
+            this.groupBox2.Text = "Chi tiết nhà cung cấp";
             // 
             // txtTenNHACUNGCAP
             // 
@@ -141,9 +141,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(41, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 17);
+            this.label2.Size = new System.Drawing.Size(116, 17);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Tên nhà xuất bản :";
+            this.label2.Text = "Tên nhà cung cấp:";
             // 
             // txtTimKiem
             // 
@@ -173,7 +173,7 @@
             this.groupBox1.Size = new System.Drawing.Size(663, 462);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách thể loại";
+            this.groupBox1.Text = "Danh sách nhà cung cấp";
             // 
             // dgvNHACUNGCAPMain
             // 
@@ -226,19 +226,19 @@
             // 
             // Ten
             // 
-            this.Ten.Caption = "Thể loại";
+            this.Ten.Caption = "Nhà cung cấp";
             this.Ten.FieldName = "Ten";
             this.Ten.Name = "Ten";
             this.Ten.Visible = true;
             this.Ten.VisibleIndex = 1;
             this.Ten.Width = 584;
             // 
-            // ucDanhSachNHACUNGCAP
+            // ucDanhSachNhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Name = "ucDanhSachNHACUNGCAP";
+            this.Name = "ucDanhSachNhaCungCap";
             this.Size = new System.Drawing.Size(1308, 548);
             this.Load += new System.EventHandler(this.ucDanhSachNHACUNGCAP_Load);
             this.panel1.ResumeLayout(false);

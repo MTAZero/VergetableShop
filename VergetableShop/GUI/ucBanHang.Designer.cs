@@ -32,6 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTongGiaTri = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.dateKetThuc = new DevExpress.XtraEditors.DateEdit();
             this.dateBatDau = new DevExpress.XtraEditors.DateEdit();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,8 +66,6 @@
             this.NhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TongTien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateKetThuc.Properties.CalendarTimeProperties)).BeginInit();
@@ -120,6 +120,23 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Bộ lọc hóa đơn";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(92, 29);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(428, 24);
+            this.txtTimKiem.TabIndex = 9;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(22, 32);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 17);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Tím kiếm :";
             // 
             // dateKetThuc
             // 
@@ -506,23 +523,6 @@
             this.TongTien.Visible = true;
             this.TongTien.VisibleIndex = 3;
             this.TongTien.Width = 146;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(92, 29);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(428, 24);
-            this.txtTimKiem.TabIndex = 9;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 32);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 17);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Tím kiếm :";
             // 
             // ucBanHang
             // 

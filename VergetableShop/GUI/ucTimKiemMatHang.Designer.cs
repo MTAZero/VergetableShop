@@ -66,7 +66,7 @@
             this.groupBox5.Size = new System.Drawing.Size(847, 519);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Danh sách đầu sách";
+            this.groupBox5.Text = "Danh sách mặt hàng";
             // 
             // panelSach
             // 

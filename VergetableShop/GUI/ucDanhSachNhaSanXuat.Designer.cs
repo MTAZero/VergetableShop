@@ -123,7 +123,7 @@
             this.groupBox2.Size = new System.Drawing.Size(576, 97);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Chi tiết nhà xuất bản";
+            this.groupBox2.Text = "Chi tiết nhà sản xuất";
             // 
             // txtTenNHASANXUAT
             // 
@@ -137,9 +137,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(41, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 17);
+            this.label2.Size = new System.Drawing.Size(112, 17);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Tên nhà xuất bản :";
+            this.label2.Text = "Tên nhà sản xuất:";
             // 
             // txtTimKiem
             // 
@@ -169,7 +169,7 @@
             this.groupBox1.Size = new System.Drawing.Size(663, 462);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách nhà xuất bản";
+            this.groupBox1.Text = "Danh sách nhà sản xuất";
             // 
             // dgvNhaXuatBanMain
             // 
@@ -222,19 +222,19 @@
             // 
             // Ten
             // 
-            this.Ten.Caption = "Nhà xuất bản";
+            this.Ten.Caption = "Nhà sản xuất";
             this.Ten.FieldName = "Ten";
             this.Ten.Name = "Ten";
             this.Ten.Visible = true;
             this.Ten.VisibleIndex = 1;
             this.Ten.Width = 584;
             // 
-            // ucDanhSachNhaXuatBan
+            // ucDanhSachNhaSanXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Name = "ucDanhSachNhaXuatBan";
+            this.Name = "ucDanhSachNhaSanXuat";
             this.Size = new System.Drawing.Size(1308, 548);
             this.Load += new System.EventHandler(this.ucDanhSachNhaXuatBan_Load);
             this.panel1.ResumeLayout(false);

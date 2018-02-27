@@ -114,7 +114,7 @@
             this.groupBox1.Size = new System.Drawing.Size(476, 446);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách đầu sách";
+            this.groupBox1.Text = "Danh sách mặt hàng";
             // 
             // dgvMATHANGMain
             // 
