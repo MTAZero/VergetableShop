@@ -15,10 +15,10 @@ namespace BookShop.GUI
     public partial class FrmThemChiTietHoaDon : MetroForm
     {
         private VergetableContext db = Helper.db;
-        private HOADONBAN pn = new HOADONBAN();
+        private HOADON pn = new HOADON();
 
         #region Hàm khởi tạo
-        public FrmThemChiTietHoaDon(HOADONBAN z)
+        public FrmThemChiTietHoaDon(HOADON z)
         {
             InitializeComponent();
             Helper.Reload();
@@ -105,9 +105,9 @@ namespace BookShop.GUI
                 MATHANG mhz = Helper.db.MATHANGs.Where(p => p.ID == Helper.IDSanPham).First();
                 z.DONGIA = Helper.GiaSanPham(mhz);
                 z.THANHTIEN = z.SOLUONG * z.DONGIA;
-                z.HOADONBANID = pn.ID;
+                z.HOADONID = pn.ID;
 
-                CHITIETHOADON cthd = db.CHITIETHOADONs.Where(p => p.MATHANGID == z.MATHANGID && p.HOADONBANID == pn.ID).FirstOrDefault();
+                CHITIETHOADON cthd = db.CHITIETHOADONs.Where(p => p.MATHANGID == z.MATHANGID && p.HOADONID == pn.ID).FirstOrDefault();
 
                 if (cthd == null)
                 {

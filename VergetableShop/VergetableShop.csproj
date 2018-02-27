@@ -143,11 +143,11 @@
     <Compile Include="GUI\ucDanhSachNhaSanXuat.Designer.cs">
       <DependentUpon>ucDanhSachNhaSanXuat.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ucDanhSachDauSach.cs">
+    <Compile Include="GUI\ucDanhSachMatHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\ucDanhSachDauSach.Designer.cs">
-      <DependentUpon>ucDanhSachDauSach.cs</DependentUpon>
+    <Compile Include="GUI\ucDanhSachMatHang.Designer.cs">
+      <DependentUpon>ucDanhSachMatHang.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\ucDanhSachNhanVien.cs">
       <SubType>UserControl</SubType>
@@ -262,8 +262,8 @@
     <EmbeddedResource Include="GUI\ucDanhSachNhaSanXuat.resx">
       <DependentUpon>ucDanhSachNhaSanXuat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ucDanhSachDauSach.resx">
-      <DependentUpon>ucDanhSachDauSach.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\ucDanhSachMatHang.resx">
+      <DependentUpon>ucDanhSachMatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ucDanhSachNhanVien.resx">
       <DependentUpon>ucDanhSachNhanVien.cs</DependentUpon>

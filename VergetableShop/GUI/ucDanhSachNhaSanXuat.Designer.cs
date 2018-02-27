@@ -34,7 +34,7 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtTenNXB = new System.Windows.Forms.TextBox();
+            this.txtTenNHASANXUAT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -116,7 +116,7 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.txtTenNXB);
+            this.groupBox2.Controls.Add(this.txtTenNHASANXUAT);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(713, 64);
             this.groupBox2.Name = "groupBox2";
@@ -125,12 +125,12 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết nhà xuất bản";
             // 
-            // txtTenNXB
+            // txtTenNHASANXUAT
             // 
-            this.txtTenNXB.Location = new System.Drawing.Point(161, 37);
-            this.txtTenNXB.Name = "txtTenNXB";
-            this.txtTenNXB.Size = new System.Drawing.Size(342, 24);
-            this.txtTenNXB.TabIndex = 1;
+            this.txtTenNHASANXUAT.Location = new System.Drawing.Point(161, 37);
+            this.txtTenNHASANXUAT.Name = "txtTenNHASANXUAT";
+            this.txtTenNHASANXUAT.Size = new System.Drawing.Size(342, 24);
+            this.txtTenNHASANXUAT.TabIndex = 1;
             // 
             // label2
             // 
@@ -265,6 +265,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView dgvNhaXuatBan;
         private DevExpress.XtraGrid.Columns.GridColumn STT;
         private DevExpress.XtraGrid.Columns.GridColumn Ten;
-        private System.Windows.Forms.TextBox txtTenNXB;
+        private System.Windows.Forms.TextBox txtTenNHASANXUAT;
     }
 }

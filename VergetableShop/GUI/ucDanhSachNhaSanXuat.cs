@@ -27,44 +27,44 @@ namespace BookShop.GUI
 
         #region Hàm chức năng
 
-        private NXB getNHAXUATBANByID()
+        private NHASANXUAT getNHAXUATBANByID()
         {
             try
             {
                 int id = (int) dgvNhaXuatBan.GetFocusedRowCellValue("ID");
-                NXB ans = db.NXBs.Where(p => p.ID == id).FirstOrDefault();
-                if (ans == null) return new NXB();
+                NHASANXUAT ans = db.NHASANXUATs.Where(p => p.ID == id).FirstOrDefault();
+                if (ans == null) return new NHASANXUAT();
                 return ans;
             }
             catch
             {
-                return new NXB();
+                return new NHASANXUAT();
             }
         }
 
-        private NXB getNHAXUATBANByForm()
+        private NHASANXUAT getNHAXUATBANByForm()
         {
-            NXB ans = new NXB();
+            NHASANXUAT ans = new NHASANXUAT();
 
-            ans.TEN = txtTenNXB.Text;
+            ans.TEN = txtTenNHASANXUAT.Text;
 
             return ans;
         }
 
         private void ClearControl()
         {
-            txtTenNXB.Text = "";
+            txtTenNHASANXUAT.Text = "";
         }
 
         private void UpdateDetail()
         {
             try
             {
-                NXB tg = getNHAXUATBANByID();
+                NHASANXUAT tg = getNHAXUATBANByID();
 
                 if (tg.ID == 0) return;
 
-                txtTenNXB.Text = tg.TEN;
+                txtTenNHASANXUAT.Text = tg.TEN;
             }
             catch
             {
@@ -74,7 +74,7 @@ namespace BookShop.GUI
 
         private void LockControl()
         {
-            txtTenNXB.Enabled = false;
+            txtTenNHASANXUAT.Enabled = false;
 
             dgvNhaXuatBanMain.Enabled = true;
             txtTimKiem.Enabled = true;
@@ -86,7 +86,7 @@ namespace BookShop.GUI
 
         private void UnlockControl()
         {
-            txtTenNXB.Enabled = true;
+            txtTenNHASANXUAT.Enabled = true;
 
             dgvNhaXuatBanMain.Enabled = false;
             txtTimKiem.Enabled = false;
@@ -94,7 +94,7 @@ namespace BookShop.GUI
 
         private bool Check()
         {
-            if (txtTenNXB.Text == "")
+            if (txtTenNHASANXUAT.Text == "")
             {
                 MessageBox.Show("Tên của nhà xuất bản không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -105,7 +105,7 @@ namespace BookShop.GUI
 
         private bool CheckLuaChon()
         {
-            NXB tg = getNHAXUATBANByID();
+            NHASANXUAT tg = getNHAXUATBANByID();
             if (tg.ID == 0)
             {
                 MessageBox.Show("Chưa có nhà xuất bản nào được chọn",
@@ -117,7 +117,7 @@ namespace BookShop.GUI
             return true;
         }
 
-        private void CapNhat(ref NXB cu, NXB moi)
+        private void CapNhat(ref NHASANXUAT cu, NHASANXUAT moi)
         {
             cu.TEN = moi.TEN;
         }
@@ -131,11 +131,11 @@ namespace BookShop.GUI
             ClearControl();
         }
 
-        private void LoadDgvNXB()
+        private void LoadDgvNHASANXUAT()
         {
             int i = 0;
             string keyWord = txtTimKiem.Text.Trim().ToUpper();
-            var listNHAXUATBAN = db.NXBs.ToList()
+            var listNHAXUATBAN = db.NHASANXUATs.ToList()
                            .Select(p => new
                            {
                                ID = p.ID,
@@ -170,7 +170,7 @@ namespace BookShop.GUI
         private void ucDanhSachNhaXuatBan_Load(object sender, EventArgs e)
         {
             LoadInitControl();
-            LoadDgvNXB();
+            LoadDgvNHASANXUAT();
             LockControl();
         }
         #endregion
@@ -199,8 +199,8 @@ namespace BookShop.GUI
                     btnXoa.Text = "Xóa";
                     LockControl();
 
-                    NXB moi = getNHAXUATBANByForm();
-                    db.NXBs.Add(moi);
+                    NHASANXUAT moi = getNHAXUATBANByForm();
+                    db.NHASANXUATs.Add(moi);
 
                     try
                     {
@@ -217,7 +217,7 @@ namespace BookShop.GUI
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
                     }
-                    LoadDgvNXB();
+                    LoadDgvNHASANXUAT();
                 }
                 return;
             }
@@ -247,8 +247,8 @@ namespace BookShop.GUI
 
                     LockControl();
 
-                    NXB cu = getNHAXUATBANByID();
-                    NXB moi = getNHAXUATBANByForm();
+                    NHASANXUAT cu = getNHAXUATBANByID();
+                    NHASANXUAT moi = getNHAXUATBANByForm();
                     CapNhat(ref cu, moi);
 
                     try
@@ -266,7 +266,7 @@ namespace BookShop.GUI
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
                     }
-                    LoadDgvNXB();
+                    LoadDgvNHASANXUAT();
                 }
 
                 return;
@@ -279,7 +279,7 @@ namespace BookShop.GUI
             {
                 if (!CheckLuaChon()) return;
 
-                NXB cu = getNHAXUATBANByID();
+                NHASANXUAT cu = getNHAXUATBANByID();
                 DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa nhà xuất bản " + cu.TEN + "?",
                                                   "Thông báo",
                                                   MessageBoxButtons.OKCancel,
@@ -289,7 +289,7 @@ namespace BookShop.GUI
 
                 try
                 {
-                    db.NXBs.Remove(cu);
+                    db.NHASANXUATs.Remove(cu);
                     db.SaveChanges();
                     MessageBox.Show("Xóa thông tin nhà xuất bản thành công",
                                     "Thông báo",
@@ -303,7 +303,7 @@ namespace BookShop.GUI
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
                 }
-                LoadDgvNXB();
+                LoadDgvNHASANXUAT();
 
                 return;
             }
@@ -325,7 +325,7 @@ namespace BookShop.GUI
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            LoadDgvNXB();
+            LoadDgvNHASANXUAT();
             txtTimKiem.Focus();
         }
 

@@ -11,13 +11,13 @@ using BookShop.Model;
 
 namespace BookShop.GUI
 {
-    public partial class ucDanhSachDauSach : UserControl
+    public partial class ucDanhSachMatHang : UserControl
     {
         private VergetableContext db = Helper.db;
         private int index = 0, index1 = 0;
 
         #region Construtor
-        public ucDanhSachDauSach()
+        public ucDanhSachMatHang()
         {
             InitializeComponent();
             Helper.Reload();
@@ -27,34 +27,33 @@ namespace BookShop.GUI
 
         #region Hàm chức năng
 
-        private SACH getSACHByID()
+        private MATHANG getMATHANGByID()
         {
             try
             {
-                int id = (int)dgvSACH.GetFocusedRowCellValue("ID");
-                SACH ans = db.SACHes.Where(p => p.ID == id).FirstOrDefault();
-                if (ans == null) return new SACH();
+                int id = (int)dgvMATHANG.GetFocusedRowCellValue("ID");
+                MATHANG ans = db.MATHANGs.Where(p => p.ID == id).FirstOrDefault();
+                if (ans == null) return new MATHANG();
                 return ans;
             }
             catch
             {
-                return new SACH();
+                return new MATHANG();
             }
         }
 
-        private SACH getSACHByForm()
+        private MATHANG getMATHANGByForm()
         {
-            SACH ans = new SACH();
+            MATHANG ans = new MATHANG();
 
             try
             {
-                ans.TEN = txtTenSach.Text;
+                ans.TEN = txtTenMATHANG.Text;
                 ans.GIABAN = Int32.Parse(txtGiaBan.Text);
                 ans.NAMXUATBAN = Int32.Parse(txtNamXuatBan.Text);
-                ans.THONGTINSACH = txtThongTinSach.Text;
-                ans.TACGIAID = (int)cbxTacGia.EditValue;
-                ans.NXBID = (int)cbxNXB.EditValue;
-                ans.THELOAIID = (int)cbxTheLoai.EditValue;
+                //ans.THONGTINMATHANG = txtThongTinMATHANG.Text;
+                ans.NHASANXUATID = (int)cbxNhaSanXuat.EditValue;
+                ans.NHACUNGCAPID = (int)cbxNhaCungCap.EditValue;
 
                 ans.ANH = Helper.imageToByteArray(imgAnh.Image);
             }
@@ -66,15 +65,15 @@ namespace BookShop.GUI
         private void ClearControl()
         {
             cbxNXB.ItemIndex = 0;
-            cbxTacGia.ItemIndex = 0;
-            cbxTheLoai.ItemIndex = 0;
+            cbxNhaSanXuat.ItemIndex = 0;
+            cbxNhaCungCap.ItemIndex = 0;
 
-            txtTenSach.Text = "";
+            txtTenMATHANG.Text = "";
             txtGiaBan.Text = "";
             txtNamXuatBan.Text = "";
-            txtThongTinSach.Text = "";
+            txtThongTinMATHANG.Text = "";
             txtTitleTacGia.Text = "";
-            txtTitleTenSach.Text = "";
+            txtTitleTenMATHANG.Text = "";
 
             imgAnh.Image = null;
         }
@@ -83,20 +82,19 @@ namespace BookShop.GUI
         {
             try
             {
-                SACH ans = getSACHByID();
+                MATHANG ans = getMATHANGByID();
 
                 if (ans.ID == 0) return;
 
-                cbxNXB.EditValue = ans.NXBID;
-                cbxTacGia.EditValue = ans.TACGIAID;
-                cbxTheLoai.EditValue = ans.THELOAIID;
+                cbxNhaSanXuat.EditValue = ans.NHASANXUATID;
+                cbxNhaCungCap.EditValue = ans.NHACUNGCAPID;
 
-                txtTenSach.Text = ans.TEN;
+                txtTenMATHANG.Text = ans.TEN;
                 txtGiaBan.Text = ans.GIABAN.ToString();
                 txtNamXuatBan.Text = ans.NAMXUATBAN.ToString();
-                txtThongTinSach.Text = ans.THONGTINSACH;
-                txtTitleTacGia.Text = cbxTacGia.Text;
-                txtTitleTenSach.Text = ans.TEN;
+                //txtThongTinMATHANG.Text = ans.THONGTINMATHANG;
+                txtTitleTacGia.Text = cbxNhaSanXuat.Text;
+                txtTitleTenMATHANG.Text = ans.TEN;
 
                 imgAnh.Image = null;
                 imgAnh.Image = Helper.byteArrayToImage(ans.ANH);
@@ -109,16 +107,16 @@ namespace BookShop.GUI
 
         private void LockControl()
         {
-            txtTenSach.Enabled = false;
-            cbxTacGia.Enabled = false;
+            txtTenMATHANG.Enabled = false;
+            cbxNhaSanXuat.Enabled = false;
             cbxNXB.Enabled = false;
-            cbxTheLoai.Enabled = false;
+            cbxNhaCungCap.Enabled = false;
             txtGiaBan.Enabled = false;
             txtNamXuatBan.Enabled = false;
-            txtThongTinSach.Enabled = false;
+            txtThongTinMATHANG.Enabled = false;
             imgAnh.Enabled = false;
 
-            dgvSACHMain.Enabled = true;
+            dgvMATHANGMain.Enabled = true;
             txtTimKiem.Enabled = true;
 
             btnThem.Enabled = true;
@@ -128,16 +126,16 @@ namespace BookShop.GUI
 
         private void UnlockControl()
         {
-            txtTenSach.Enabled = true;
-            cbxTacGia.Enabled = true;
+            txtTenMATHANG.Enabled = true;
+            cbxNhaSanXuat.Enabled = true;
             cbxNXB.Enabled = true;
-            cbxTheLoai.Enabled = true;
+            cbxNhaCungCap.Enabled = true;
             txtGiaBan.Enabled = true;
             txtNamXuatBan.Enabled = true;
-            txtThongTinSach.Enabled = true;
+            txtThongTinMATHANG.Enabled = true;
             imgAnh.Enabled = true;
 
-            dgvSACHMain.Enabled = false;
+            dgvMATHANGMain.Enabled = false;
             txtTimKiem.Enabled = false;
         }
 
@@ -145,13 +143,13 @@ namespace BookShop.GUI
         {
             if (imgAnh.Image == null)
             {
-                MessageBox.Show("Ảnh của đầu sách không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ảnh của mặt hàng không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            if (txtTenSach.Text == "")
+            if (txtTenMATHANG.Text == "")
             {
-                MessageBox.Show("Tên của đầu sách không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Tên của mặt hàng không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -162,7 +160,7 @@ namespace BookShop.GUI
             }
             catch
             {
-                MessageBox.Show("Giá bán của đầu sách phải là số nguyên dương",
+                MessageBox.Show("Giá bán của mặt hàng phải là số nguyên dương",
                                 "Thông báo",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
@@ -196,10 +194,10 @@ namespace BookShop.GUI
 
         private bool CheckLuaChon()
         {
-            SACH tg = getSACHByID();
+            MATHANG tg = getMATHANGByID();
             if (tg.ID == 0)
             {
-                MessageBox.Show("Chưa có đầu sách nào được chọn",
+                MessageBox.Show("Chưa có mặt hàng nào được chọn",
                                 "Thông báo",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
@@ -208,15 +206,14 @@ namespace BookShop.GUI
             return true;
         }
 
-        private void CapNhat(ref SACH cu, SACH moi)
+        private void CapNhat(ref MATHANG cu, MATHANG moi)
         {
             cu.TEN = moi.TEN;
-            cu.TACGIAID = moi.TACGIAID;
-            cu.NXBID = moi.NXBID;
-            cu.THELOAIID = moi.THELOAIID;
+            cu.NHASANXUATID = moi.NHASANXUATID;
+            cu.NHACUNGCAPID = moi.NHACUNGCAPID;
             cu.GIABAN = moi.GIABAN;
             cu.NAMXUATBAN = moi.NAMXUATBAN;
-            cu.THONGTINSACH = moi.THONGTINSACH;
+            //cu.THONGTINMATHANG = moi.THONGTINMATHANG;
             cu.ANH = moi.ANH;
         }
 
@@ -226,26 +223,22 @@ namespace BookShop.GUI
 
         private void LoadInitControl()
         {
-            cbxNXB.Properties.DataSource = db.NXBs.Select(p => new { ID = p.ID, TEN = p.TEN }).ToList();
-            cbxNXB.Properties.DisplayMember = "TEN";
-            cbxNXB.Properties.ValueMember = "ID";
+            cbxNhaSanXuat.Properties.DataSource = db.NHASANXUATs.Select(p => new { ID = p.ID, TEN = p.TEN }).ToList();
+            cbxNhaSanXuat.Properties.DisplayMember = "TEN";
+            cbxNhaSanXuat.Properties.ValueMember = "ID";
 
-            cbxTacGia.Properties.DataSource = db.TACGIAs.Select(p => new { ID = p.ID, TEN = p.TEN }).ToList();
-            cbxTacGia.Properties.DisplayMember = "TEN";
-            cbxTacGia.Properties.ValueMember = "ID";
-
-            cbxTheLoai.Properties.DataSource = db.THELOAIs.Select(p => new { ID = p.ID, TEN = p.TEN }).ToList();
-            cbxTheLoai.Properties.DisplayMember = "TEN";
-            cbxTheLoai.Properties.ValueMember = "ID";
+            cbxNhaCungCap.Properties.DataSource = db.NHACUNGCAPs.Select(p => new { ID = p.ID, TEN = p.TEN }).ToList();
+            cbxNhaCungCap.Properties.DisplayMember = "TEN";
+            cbxNhaCungCap.Properties.ValueMember = "ID";
 
             ClearControl();
         }
 
-        private void LoadDgvSACH()
+        private void LoadDgvMATHANG()
         {
             int i = 0;
             string keyWord = txtTimKiem.Text.Trim().ToUpper();
-            var listSach = db.SACHes.ToList()
+            var listMATHANG = db.MATHANGs.ToList()
                            .Select(p => new
                            {
                                ID = p.ID,
@@ -254,7 +247,7 @@ namespace BookShop.GUI
                            })
                            .ToList();
 
-            dgvSACHMain.DataSource = listSach.ToList()
+            dgvMATHANGMain.DataSource = listMATHANG.ToList()
                                      .Where(p => p.Ten.ToUpper().Contains(keyWord))
                                      .Select(p => new
                                      {
@@ -270,8 +263,8 @@ namespace BookShop.GUI
             try
             {
                 index = index1;
-                dgvSACH.FocusedRowHandle = index;
-                dgvSACHMain.Select();
+                dgvMATHANG.FocusedRowHandle = index;
+                dgvMATHANGMain.Select();
             }
             catch
             {
@@ -280,10 +273,10 @@ namespace BookShop.GUI
 
         }
 
-        private void ucDanhSachDauSach_Load(object sender, EventArgs e)
+        private void ucDanhMATHANGDauMATHANG_Load(object sender, EventArgs e)
         {
             LoadInitControl();
-            LoadDgvSACH();
+            LoadDgvMATHANG();
             LockControl();
         }
 
@@ -312,34 +305,28 @@ namespace BookShop.GUI
                     btnXoa.Text = "Xóa";
                     LockControl();
 
-                    SACH moi = getSACHByForm();
-                    db.SACHes.Add(moi);
+                    MATHANG moi = getMATHANGByForm();
+                    moi.SOLUONG = 0;
+                    db.MATHANGs.Add(moi);
                     
 
                     try
                     {
                         db.SaveChanges();
 
-                        MATHANG mh = new MATHANG();
-                        mh.LOAISP = 0;
-                        mh.SACHID = moi.ID;
-                        mh.SOLUONG = 0;
-                        db.MATHANGs.Add(mh);
-                        db.SaveChanges();
-
-                        MessageBox.Show("Thêm thông tin đầu sách thành công",
+                        MessageBox.Show("Thêm thông tin mặt hàng thành công",
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Thêm thông tin đầu sách thất bại\n" + ex.Message,
+                        MessageBox.Show("Thêm thông tin mặt hàng thất bại\n" + ex.Message,
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
                     }
-                    LoadDgvSACH();
+                    LoadDgvMATHANG();
                 }
                 return;
             }
@@ -369,26 +356,26 @@ namespace BookShop.GUI
 
                     LockControl();
 
-                    SACH cu = getSACHByID();
-                    SACH moi = getSACHByForm();
+                    MATHANG cu = getMATHANGByID();
+                    MATHANG moi = getMATHANGByForm();
                     CapNhat(ref cu, moi);
 
                     try
                     {
                         db.SaveChanges();
-                        MessageBox.Show("Sưa thông tin đầu sách thành công",
+                        MessageBox.Show("Sưa thông tin mặt hàng thành công",
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Sửa thông tin đầu sách thất bại\n" + ex.Message,
+                        MessageBox.Show("Sửa thông tin mặt hàng thất bại\n" + ex.Message,
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
                     }
-                    LoadDgvSACH();
+                    LoadDgvMATHANG();
                 }
 
                 return;
@@ -401,8 +388,8 @@ namespace BookShop.GUI
             {
                 if (!CheckLuaChon()) return;
 
-                SACH cu = getSACHByID();
-                DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa đầu sách " + cu.TEN + "?",
+                MATHANG cu = getMATHANGByID();
+                DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa mặt hàng " + cu.TEN + "?",
                                                   "Thông báo",
                                                   MessageBoxButtons.OKCancel,
                                                   MessageBoxIcon.Warning);
@@ -411,24 +398,21 @@ namespace BookShop.GUI
 
                 try
                 {
-                    MATHANG mh = db.MATHANGs.Where(p => p.LOAISP == 0 && p.SACHID == cu.ID).FirstOrDefault();
-                    if (mh != null) db.MATHANGs.Remove(mh);
-
-                    db.SACHes.Remove(cu);
+                    db.MATHANGs.Remove(cu);
                     db.SaveChanges();
-                    MessageBox.Show("Xóa thông tin đầu sách thành công",
+                    MessageBox.Show("Xóa thông tin mặt hàng thành công",
                                     "Thông báo",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Xóa thông tin đầu sách thất bại\n" + ex.Message,
+                    MessageBox.Show("Xóa thông tin mặt hàng thất bại\n" + ex.Message,
                                     "Thông báo",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
                 }
-                LoadDgvSACH();
+                LoadDgvMATHANG();
 
                 return;
             }
@@ -478,18 +462,18 @@ namespace BookShop.GUI
         #region Sự kiện ngầm
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            LoadDgvSACH();
+            LoadDgvMATHANG();
             txtTimKiem.Focus();   
         }
 
-        private void dgvDauSach_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        private void dgvDauMATHANG_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             UpdateDetail();
 
             try
             {
                 index1 = index;
-                index = dgvSACH.FocusedRowHandle;
+                index = dgvMATHANG.FocusedRowHandle;
             }
             catch { }
         }

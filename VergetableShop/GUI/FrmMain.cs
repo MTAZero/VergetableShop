@@ -39,7 +39,7 @@ namespace BookShop.GUI
         private void barSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             panelMain.Controls.Clear();
-            ucDanhSachDauSach uc = new ucDanhSachDauSach();
+            ucDanhSachMatHang uc = new ucDanhSachMatHang();
             uc.Dock = DockStyle.Fill;
             panelMain.Controls.Add(uc);
         }
