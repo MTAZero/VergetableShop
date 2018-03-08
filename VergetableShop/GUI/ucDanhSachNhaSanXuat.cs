@@ -47,6 +47,9 @@ namespace BookShop.GUI
             NHASANXUAT ans = new NHASANXUAT();
 
             ans.TEN = txtTenNHASANXUAT.Text;
+            ans.DIACHI = txtDiaChi.Text;
+            ans.MASOTHUE = txtMaSoThue.Text;
+            ans.SDT = txtSDT.Text;
 
             return ans;
         }
@@ -54,6 +57,9 @@ namespace BookShop.GUI
         private void ClearControl()
         {
             txtTenNHASANXUAT.Text = "";
+            txtDiaChi.Text = "";
+            txtMaSoThue.Text = "";
+            txtSDT.Text = "";
         }
 
         private void UpdateDetail()
@@ -65,6 +71,9 @@ namespace BookShop.GUI
                 if (tg.ID == 0) return;
 
                 txtTenNHASANXUAT.Text = tg.TEN;
+                txtDiaChi.Text = tg.DIACHI;
+                txtMaSoThue.Text = tg.MASOTHUE;
+                txtSDT.Text = tg.SDT;
             }
             catch
             {
@@ -75,6 +84,9 @@ namespace BookShop.GUI
         private void LockControl()
         {
             txtTenNHASANXUAT.Enabled = false;
+            txtDiaChi.Enabled = false;
+            txtMaSoThue.Enabled = false;
+            txtSDT.Enabled = false;
 
             dgvNhaXuatBanMain.Enabled = true;
             txtTimKiem.Enabled = true;
@@ -87,6 +99,9 @@ namespace BookShop.GUI
         private void UnlockControl()
         {
             txtTenNHASANXUAT.Enabled = true;
+            txtDiaChi.Enabled = true;
+            txtMaSoThue.Enabled = true;
+            txtSDT.Enabled = true;
 
             dgvNhaXuatBanMain.Enabled = false;
             txtTimKiem.Enabled = false;
@@ -96,7 +111,25 @@ namespace BookShop.GUI
         {
             if (txtTenNHASANXUAT.Text == "")
             {
-                MessageBox.Show("Tên của nhà xuất bản không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Tên của nhà sản xuất không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (txtDiaChi.Text == "")
+            {
+                MessageBox.Show("Địa chỉ của nhà sản xuất không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (txtMaSoThue.Text == "")
+            {
+                MessageBox.Show("Mã số thuế của nhà sản xuất không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (txtSDT.Text == "")
+            {
+                MessageBox.Show("Số điện thoại của nhà sản xuất không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error); 
                 return false;
             }
 
@@ -108,7 +141,7 @@ namespace BookShop.GUI
             NHASANXUAT tg = getNHAXUATBANByID();
             if (tg.ID == 0)
             {
-                MessageBox.Show("Chưa có nhà xuất bản nào được chọn",
+                MessageBox.Show("Chưa có nhà sản xuất nào được chọn",
                                 "Thông báo",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
@@ -120,6 +153,9 @@ namespace BookShop.GUI
         private void CapNhat(ref NHASANXUAT cu, NHASANXUAT moi)
         {
             cu.TEN = moi.TEN;
+            cu.DIACHI = moi.DIACHI;
+            cu.MASOTHUE = moi.MASOTHUE;
+            cu.SDT = moi.SDT;
         }
 
         #endregion
@@ -205,14 +241,14 @@ namespace BookShop.GUI
                     try
                     {
                         db.SaveChanges();
-                        MessageBox.Show("Thêm thông tin nhà xuất bản thành công",
+                        MessageBox.Show("Thêm thông tin nhà sản xuất thành công",
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Thêm thông tin nhà xuất bản thất bại\n" + ex.Message,
+                        MessageBox.Show("Thêm thông tin nhà sản xuất thất bại\n" + ex.Message,
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
@@ -254,14 +290,14 @@ namespace BookShop.GUI
                     try
                     {
                         db.SaveChanges();
-                        MessageBox.Show("Sưa thông tin nhà xuất bản thành công",
+                        MessageBox.Show("Sưa thông tin nhà sản xuất thành công",
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Sửa thông tin nhà xuất bản thất bại\n" + ex.Message,
+                        MessageBox.Show("Sửa thông tin nhà sản xuất thất bại\n" + ex.Message,
                                         "Thông báo",
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Error);
@@ -280,7 +316,7 @@ namespace BookShop.GUI
                 if (!CheckLuaChon()) return;
 
                 NHASANXUAT cu = getNHAXUATBANByID();
-                DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa nhà xuất bản " + cu.TEN + "?",
+                DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa nhà sản xuất " + cu.TEN + "?",
                                                   "Thông báo",
                                                   MessageBoxButtons.OKCancel,
                                                   MessageBoxIcon.Warning);
@@ -291,14 +327,14 @@ namespace BookShop.GUI
                 {
                     db.NHASANXUATs.Remove(cu);
                     db.SaveChanges();
-                    MessageBox.Show("Xóa thông tin nhà xuất bản thành công",
+                    MessageBox.Show("Xóa thông tin nhà sản xuất thành công",
                                     "Thông báo",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Xóa thông tin nhà xuất bản thất bại\n" + ex.Message,
+                    MessageBox.Show("Xóa thông tin nhà sản xuất thất bại\n" + ex.Message,
                                     "Thông báo",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);

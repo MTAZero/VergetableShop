@@ -409,9 +409,9 @@
             this.txtTitleTacGia.ForeColor = System.Drawing.Color.Black;
             this.txtTitleTacGia.Location = new System.Drawing.Point(216, 104);
             this.txtTitleTacGia.Name = "txtTitleTacGia";
-            this.txtTitleTacGia.Size = new System.Drawing.Size(143, 21);
+            this.txtTitleTacGia.Size = new System.Drawing.Size(23, 21);
             this.txtTitleTacGia.TabIndex = 2;
-            this.txtTitleTacGia.Text = "Nguyễn Nhật Ánh";
+            this.txtTitleTacGia.Text = "N";
             // 
             // txtTitleTenMATHANG
             // 
@@ -420,9 +420,8 @@
             this.txtTitleTenMATHANG.ForeColor = System.Drawing.Color.Black;
             this.txtTitleTenMATHANG.Location = new System.Drawing.Point(213, 54);
             this.txtTitleTenMATHANG.Name = "txtTitleTenMATHANG";
-            this.txtTitleTenMATHANG.Size = new System.Drawing.Size(426, 39);
+            this.txtTitleTenMATHANG.Size = new System.Drawing.Size(0, 39);
             this.txtTitleTenMATHANG.TabIndex = 1;
-            this.txtTitleTenMATHANG.Text = "Tôi thấy hoa vàng trên cỏ xanh";
             // 
             // ucDanhSachMatHang
             // 
