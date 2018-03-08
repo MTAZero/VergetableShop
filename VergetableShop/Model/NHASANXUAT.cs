@@ -19,6 +19,12 @@ namespace BookShop.Model
 
         public string TEN { get; set; }
 
+        public string DIACHI { get; set; }
+
+        public string MASOTHUE { get; set; }
+
+        public string SDT { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MATHANG> MATHANGs { get; set; }
     }

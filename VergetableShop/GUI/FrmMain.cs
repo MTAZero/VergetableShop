@@ -48,10 +48,10 @@ namespace BookShop.GUI
 
         private void barTheLoai_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            panelMain.Controls.Clear();
-            ucDanhSachNhaCungCap uc = new ucDanhSachNhaCungCap();
-            uc.Dock = DockStyle.Fill;
-            panelMain.Controls.Add(uc);
+            //panelMain.Controls.Clear();
+            //ucDanhSachNhaCungCap uc = new ucDanhSachNhaCungCap();
+            //uc.Dock = DockStyle.Fill;
+            //panelMain.Controls.Add(uc);
         }
         
 

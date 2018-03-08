@@ -53,7 +53,6 @@ namespace BookShop.GUI
                 ans.NAMXUATBAN = Int32.Parse(txtNamXuatBan.Text);
                 //ans.THONGTINMATHANG = txtThongTinMATHANG.Text;
                 ans.NHASANXUATID = (int)cbxNhaSanXuat.EditValue;
-                ans.NHACUNGCAPID = (int)cbxNhaCungCap.EditValue;
 
                 ans.ANH = Helper.imageToByteArray(imgAnh.Image);
             }
@@ -66,7 +65,6 @@ namespace BookShop.GUI
         {
             //cbxNXB.ItemIndex = 0;
             cbxNhaSanXuat.ItemIndex = 0;
-            cbxNhaCungCap.ItemIndex = 0;
 
             txtTenMATHANG.Text = "";
             txtGiaBan.Text = "";
@@ -87,7 +85,6 @@ namespace BookShop.GUI
                 if (ans.ID == 0) return;
 
                 cbxNhaSanXuat.EditValue = ans.NHASANXUATID;
-                cbxNhaCungCap.EditValue = ans.NHACUNGCAPID;
 
                 txtTenMATHANG.Text = ans.TEN;
                 txtGiaBan.Text = ans.GIABAN.ToString();
@@ -109,8 +106,6 @@ namespace BookShop.GUI
         {
             txtTenMATHANG.Enabled = false;
             cbxNhaSanXuat.Enabled = false;
-            //cbxNXB.Enabled = false;
-            cbxNhaCungCap.Enabled = false;
             txtGiaBan.Enabled = false;
             txtNamXuatBan.Enabled = false;
             //txtThongTinMATHANG.Enabled = false;
@@ -128,11 +123,8 @@ namespace BookShop.GUI
         {
             txtTenMATHANG.Enabled = true;
             cbxNhaSanXuat.Enabled = true;
-           // cbxNXB.Enabled = true;
-            cbxNhaCungCap.Enabled = true;
             txtGiaBan.Enabled = true;
             txtNamXuatBan.Enabled = true;
-            //txtThongTinMATHANG.Enabled = true;
             imgAnh.Enabled = true;
 
             dgvMATHANGMain.Enabled = false;
@@ -210,7 +202,6 @@ namespace BookShop.GUI
         {
             cu.TEN = moi.TEN;
             cu.NHASANXUATID = moi.NHASANXUATID;
-            cu.NHACUNGCAPID = moi.NHACUNGCAPID;
             cu.GIABAN = moi.GIABAN;
             cu.NAMXUATBAN = moi.NAMXUATBAN;
             //cu.THONGTINMATHANG = moi.THONGTINMATHANG;
@@ -226,10 +217,6 @@ namespace BookShop.GUI
             cbxNhaSanXuat.Properties.DataSource = db.NHASANXUATs.Select(p => new { ID = p.ID, TEN = p.TEN }).ToList();
             cbxNhaSanXuat.Properties.DisplayMember = "TEN";
             cbxNhaSanXuat.Properties.ValueMember = "ID";
-
-            cbxNhaCungCap.Properties.DataSource = db.NHACUNGCAPs.Select(p => new { ID = p.ID, TEN = p.TEN }).ToList();
-            cbxNhaCungCap.Properties.DisplayMember = "TEN";
-            cbxNhaCungCap.Properties.ValueMember = "ID";
 
             ClearControl();
         }

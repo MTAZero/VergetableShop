@@ -34,7 +34,6 @@
             this.panelMain = new System.Windows.Forms.Panel();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barNhanVien = new DevExpress.XtraBars.BarButtonItem();
-            this.barTheLoai = new DevExpress.XtraBars.BarButtonItem();
             this.barNhaXuatBan = new DevExpress.XtraBars.BarButtonItem();
             this.barSach = new DevExpress.XtraBars.BarButtonItem();
             this.barNhapHang = new DevExpress.XtraBars.BarButtonItem();
@@ -91,7 +90,6 @@
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
             this.barNhanVien,
-            this.barTheLoai,
             this.barNhaXuatBan,
             this.barSach,
             this.barNhapHang,
@@ -126,15 +124,6 @@
             this.barNhanVien.Name = "barNhanVien";
             this.barNhanVien.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barNhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barNhanVien_ItemClick);
-            // 
-            // barTheLoai
-            // 
-            this.barTheLoai.Caption = "Nhà cung cấp";
-            this.barTheLoai.Glyph = ((System.Drawing.Image)(resources.GetObject("barTheLoai.Glyph")));
-            this.barTheLoai.Id = 2;
-            this.barTheLoai.Name = "barTheLoai";
-            this.barTheLoai.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.barTheLoai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barTheLoai_ItemClick);
             // 
             // barNhaXuatBan
             // 
@@ -325,7 +314,6 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barNhanVien);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barTheLoai);
             this.ribbonPageGroup2.ItemLinks.Add(this.barNhaXuatBan);
             this.ribbonPageGroup2.ItemLinks.Add(this.barSach);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
@@ -390,7 +378,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage pageQuanTri;
         private DevExpress.XtraBars.BarButtonItem barNhanVien;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.BarButtonItem barTheLoai;
         private DevExpress.XtraBars.BarButtonItem barNhaXuatBan;
         private DevExpress.XtraBars.BarButtonItem barSach;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;

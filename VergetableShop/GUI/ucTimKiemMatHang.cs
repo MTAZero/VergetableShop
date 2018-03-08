@@ -26,24 +26,6 @@ namespace BookShop.GUI
 
         #region LoadForm
 
-        private void LoadNHACUNGCAP()
-        {
-            panelNHACUNGCAP.Controls.Clear();
-
-            var listNHACUNGCAP = db.NHACUNGCAPs.ToList();
-            foreach (var item in listNHACUNGCAP)
-            {
-                CheckBox ich = new CheckBox();
-                ich.Tag = item.ID;
-                ich.Text = item.TEN;
-                ich.AutoSize = false;
-                ich.Size = new System.Drawing.Size(350, 21);
-                ich.CheckedChanged += LoadSach;
-                ich.Checked = true;
-                panelNHACUNGCAP.Controls.Add(ich);
-            }
-        }
-
         private void LoadNHASANXUAT()
         {
             panelNHASANXUAT.Controls.Clear();
@@ -86,26 +68,6 @@ namespace BookShop.GUI
                        )
                        .ToList();
 
-            /// Getlist thể loại được chọn
-            var listNHACUNGCAP = new List<NHACUNGCAP>();
-            foreach (var item in panelNHACUNGCAP.Controls)
-            {
-                var iz = item as CheckBox;
-
-                if (iz.Checked)
-                {
-                    NHACUNGCAP tg = db.NHACUNGCAPs.Where(p => p.ID == (int)iz.Tag).First();
-                    listNHACUNGCAP.Add(tg);
-                }
-            }
-            listSach = (
-                        from sach in listSach
-                        from NHACUNGCAP in listNHACUNGCAP
-                        where sach.NHACUNGCAPID == NHACUNGCAP.ID
-                        select sach
-                       )
-                       .ToList();
-
             /// Hiển thị các quyển sách
             panelSach.Controls.Clear();
             foreach (var item in listSach)
@@ -123,7 +85,6 @@ namespace BookShop.GUI
 
         private void ucTimKiemSach_Load(object sender, EventArgs e)
         {
-            LoadNHACUNGCAP();
             LoadNHASANXUAT();
             //LoadNXB();
             DisplayListSach();
