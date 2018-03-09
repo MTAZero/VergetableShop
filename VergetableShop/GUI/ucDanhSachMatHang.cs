@@ -51,8 +51,9 @@ namespace BookShop.GUI
                 ans.TEN = txtTenMATHANG.Text;
                 ans.GIABAN = Int32.Parse(txtGiaBan.Text);
                 ans.NAMXUATBAN = Int32.Parse(txtNamXuatBan.Text);
-                //ans.THONGTINMATHANG = txtThongTinMATHANG.Text;
                 ans.NHASANXUATID = (int)cbxNhaSanXuat.EditValue;
+                ans.GIASI = Int32.Parse(txtGiaSi.Text);
+                ans.GIASHIP = Int32.Parse(txtGiaShip.Text);
 
                 ans.ANH = Helper.imageToByteArray(imgAnh.Image);
             }
@@ -68,8 +69,9 @@ namespace BookShop.GUI
 
             txtTenMATHANG.Text = "";
             txtGiaBan.Text = "";
+            txtGiaSi.Text = "";
+            txtGiaShip.Text = "";
             txtNamXuatBan.Text = "";
-            //txtThongTinMATHANG.Text = "";
             txtTitleTacGia.Text = "";
             txtTitleTenMATHANG.Text = "";
 
@@ -88,10 +90,12 @@ namespace BookShop.GUI
 
                 txtTenMATHANG.Text = ans.TEN;
                 txtGiaBan.Text = ans.GIABAN.ToString();
+                txtGiaSi.Text = ans.GIASI.ToString();
+                txtGiaShip.Text = ans.GIASHIP.ToString();
                 txtNamXuatBan.Text = ans.NAMXUATBAN.ToString();
-                //txtThongTinMATHANG.Text = ans.THONGTINMATHANG;
                 txtTitleTacGia.Text = cbxNhaSanXuat.Text;
                 txtTitleTenMATHANG.Text = ans.TEN;
+
 
                 imgAnh.Image = null;
                 imgAnh.Image = Helper.byteArrayToImage(ans.ANH);
@@ -108,8 +112,9 @@ namespace BookShop.GUI
             cbxNhaSanXuat.Enabled = false;
             txtGiaBan.Enabled = false;
             txtNamXuatBan.Enabled = false;
-            //txtThongTinMATHANG.Enabled = false;
             imgAnh.Enabled = false;
+            txtGiaSi.Enabled = false;
+            txtGiaShip.Enabled = false;
 
             dgvMATHANGMain.Enabled = true;
             txtTimKiem.Enabled = true;
@@ -126,6 +131,8 @@ namespace BookShop.GUI
             txtGiaBan.Enabled = true;
             txtNamXuatBan.Enabled = true;
             imgAnh.Enabled = true;
+            txtGiaSi.Enabled = true;
+            txtGiaShip.Enabled = true;
 
             dgvMATHANGMain.Enabled = false;
             txtTimKiem.Enabled = false;
@@ -181,6 +188,34 @@ namespace BookShop.GUI
                 return false;
             }
 
+            try
+            {
+                int giaban = Int32.Parse(txtGiaSi.Text);
+                giaban = giaban / giaban;
+            }
+            catch
+            {
+                MessageBox.Show("Giá sỉ của mặt hàng phải là số nguyên dương",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false;
+            }
+
+            try
+            {
+                int giaban = Int32.Parse(txtGiaShip.Text);
+                giaban = giaban / giaban;
+            }
+            catch
+            {
+                MessageBox.Show("Giá ship của mặt hàng phải là số nguyên dương",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false;
+            }
+
             return true;
         }
 
@@ -205,6 +240,8 @@ namespace BookShop.GUI
             cu.GIABAN = moi.GIABAN;
             cu.NAMXUATBAN = moi.NAMXUATBAN;
             //cu.THONGTINMATHANG = moi.THONGTINMATHANG;
+            cu.GIASI = moi.GIASI;
+            cu.GIASHIP = moi.GIASHIP;
             cu.ANH = moi.ANH;
         }
 
@@ -451,6 +488,11 @@ namespace BookShop.GUI
         {
             LoadDgvMATHANG();
             txtTimKiem.Focus();   
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void dgvDauMATHANG_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)

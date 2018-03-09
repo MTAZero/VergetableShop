@@ -58,6 +58,10 @@
             this.imgAnh = new System.Windows.Forms.PictureBox();
             this.txtTitleTacGia = new System.Windows.Forms.Label();
             this.txtTitleTenMATHANG = new System.Windows.Forms.Label();
+            this.txtGiaSi = new DevExpress.XtraEditors.TextEdit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtGiaShip = new DevExpress.XtraEditors.TextEdit();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -73,6 +77,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTenMATHANG.Properties)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGiaSi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGiaShip.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -279,7 +285,11 @@
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel7.Controls.Add(this.txtGiaShip);
+            this.panel7.Controls.Add(this.label3);
+            this.panel7.Controls.Add(this.txtGiaSi);
             this.panel7.Controls.Add(this.cbxNhaSanXuat);
+            this.panel7.Controls.Add(this.label2);
             this.panel7.Controls.Add(this.txtNamXuatBan);
             this.panel7.Controls.Add(this.txtGiaBan);
             this.panel7.Controls.Add(this.txtTenMATHANG);
@@ -295,7 +305,7 @@
             // 
             // cbxNhaSanXuat
             // 
-            this.cbxNhaSanXuat.Location = new System.Drawing.Point(142, 82);
+            this.cbxNhaSanXuat.Location = new System.Drawing.Point(142, 83);
             this.cbxNhaSanXuat.Name = "cbxNhaSanXuat";
             this.cbxNhaSanXuat.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.cbxNhaSanXuat.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
@@ -312,7 +322,7 @@
             // 
             // txtNamXuatBan
             // 
-            this.txtNamXuatBan.Location = new System.Drawing.Point(142, 195);
+            this.txtNamXuatBan.Location = new System.Drawing.Point(142, 193);
             this.txtNamXuatBan.Name = "txtNamXuatBan";
             this.txtNamXuatBan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.txtNamXuatBan.Properties.Appearance.Options.UseFont = true;
@@ -322,7 +332,7 @@
             // 
             // txtGiaBan
             // 
-            this.txtGiaBan.Location = new System.Drawing.Point(142, 141);
+            this.txtGiaBan.Location = new System.Drawing.Point(142, 138);
             this.txtGiaBan.Name = "txtGiaBan";
             this.txtGiaBan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.txtGiaBan.Properties.Appearance.Options.UseFont = true;
@@ -343,16 +353,16 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(24, 199);
+            this.label9.Location = new System.Drawing.Point(24, 197);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 17);
+            this.label9.Size = new System.Drawing.Size(108, 17);
             this.label9.TabIndex = 5;
-            this.label9.Text = "Năm sản xuất:";
+            this.label9.Text = "Ngày tháng năm:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 145);
+            this.label6.Location = new System.Drawing.Point(24, 142);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 17);
             this.label6.TabIndex = 2;
@@ -361,7 +371,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 86);
+            this.label5.Location = new System.Drawing.Point(24, 87);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 17);
             this.label5.TabIndex = 1;
@@ -423,6 +433,45 @@
             this.txtTitleTenMATHANG.Size = new System.Drawing.Size(0, 39);
             this.txtTitleTenMATHANG.TabIndex = 1;
             // 
+            // txtGiaSi
+            // 
+            this.txtGiaSi.Location = new System.Drawing.Point(142, 248);
+            this.txtGiaSi.Name = "txtGiaSi";
+            this.txtGiaSi.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtGiaSi.Properties.Appearance.Options.UseFont = true;
+            this.txtGiaSi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtGiaSi.Size = new System.Drawing.Size(208, 26);
+            this.txtGiaSi.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 252);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Giá sỉ: ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // txtGiaShip
+            // 
+            this.txtGiaShip.Location = new System.Drawing.Point(142, 303);
+            this.txtGiaShip.Name = "txtGiaShip";
+            this.txtGiaShip.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.txtGiaShip.Properties.Appearance.Options.UseFont = true;
+            this.txtGiaShip.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.txtGiaShip.Size = new System.Drawing.Size(208, 26);
+            this.txtGiaShip.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(24, 307);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 17);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Giá ship:";
+            // 
             // ucDanhSachMatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,6 +498,8 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgAnh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGiaSi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGiaShip.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -484,5 +535,9 @@
         private System.Windows.Forms.PictureBox imgAnh;
         private DevExpress.XtraGrid.Columns.GridColumn GiaBan;
         private DevExpress.XtraEditors.LookUpEdit cbxNhaSanXuat;
+        private DevExpress.XtraEditors.TextEdit txtGiaShip;
+        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.TextEdit txtGiaSi;
+        private System.Windows.Forms.Label label2;
     }
 }
