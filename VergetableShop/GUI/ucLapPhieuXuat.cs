@@ -36,7 +36,7 @@ namespace BookShop.GUI
             ans.NGAY = dateNgayBan.DateTime;
             ans.NHANVIENID = (int) cbxNhanVien.EditValue;
             ans.TONGTIEN = Int32.Parse(txtChiPhi.Text);
-            
+            ans.TENKHACHHANG = txtTenKhachHang.Text;
 
             return ans;
         }
@@ -67,6 +67,12 @@ namespace BookShop.GUI
                                 "Thông báo",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (txtTenKhachHang.Text == "")
+            {
+                MessageBox.Show("Tên khách hàng không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -121,6 +127,7 @@ namespace BookShop.GUI
             dgvChiTietHoaDonMain.Enabled = false;
 
             txtMaHoaDon.Enabled = true;
+            txtTenKhachHang.Enabled = true;
         }
 
         private void LoadOldHoaDon()
@@ -131,6 +138,7 @@ namespace BookShop.GUI
             dateNgayBan.DateTime = (DateTime)pn.NGAY; dateNgayBan.Enabled = false;
             cbxNhanVien.EditValue = pn.NHANVIENID; cbxNhanVien.Enabled = false;
             txtChiPhi.Text = ((int)pn.TONGTIEN).ToString("N0");
+            txtTenKhachHang.Enabled = false;
 
             btnLapHoaDon.Enabled = true;
 
@@ -189,6 +197,7 @@ namespace BookShop.GUI
             txtMaHoaDon.Text = "";
             dateNgayBan.DateTime = DateTime.Now;
             txtChiPhi.Text = "0";
+            txtTenKhachHang.Text = "";
         }
 
         private void btnTra_Click(object sender, EventArgs e)

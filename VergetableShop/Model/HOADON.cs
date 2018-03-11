@@ -24,6 +24,7 @@ namespace BookShop.Model
         public DateTime? NGAY { get; set; }
 
         public int? TONGTIEN { get; set; }
+        public string TENKHACHHANG { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIETHOADON> CHITIETHOADONs { get; set; }

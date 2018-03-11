@@ -354,9 +354,9 @@
             this.txtTongChiPhi.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongChiPhi.Location = new System.Drawing.Point(167, 133);
             this.txtTongChiPhi.Name = "txtTongChiPhi";
-            this.txtTongChiPhi.Size = new System.Drawing.Size(72, 17);
+            this.txtTongChiPhi.Size = new System.Drawing.Size(12, 17);
             this.txtTongChiPhi.TabIndex = 7;
-            this.txtTongChiPhi.Text = "1,500,000";
+            this.txtTongChiPhi.Text = " ";
             // 
             // txtNhanVien
             // 
@@ -364,9 +364,9 @@
             this.txtNhanVien.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhanVien.Location = new System.Drawing.Point(167, 82);
             this.txtNhanVien.Name = "txtNhanVien";
-            this.txtNhanVien.Size = new System.Drawing.Size(117, 17);
+            this.txtNhanVien.Size = new System.Drawing.Size(12, 17);
             this.txtNhanVien.TabIndex = 6;
-            this.txtNhanVien.Text = "Phạm Thị Quỳnh";
+            this.txtNhanVien.Text = " ";
             // 
             // dateNgayBan
             // 
@@ -374,9 +374,9 @@
             this.dateNgayBan.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgayBan.Location = new System.Drawing.Point(499, 31);
             this.dateNgayBan.Name = "dateNgayBan";
-            this.dateNgayBan.Size = new System.Drawing.Size(80, 17);
+            this.dateNgayBan.Size = new System.Drawing.Size(12, 17);
             this.dateNgayBan.TabIndex = 5;
-            this.dateNgayBan.Text = "04/12/2017";
+            this.dateNgayBan.Text = " ";
             // 
             // txtMaHoaDon
             // 
@@ -384,9 +384,9 @@
             this.txtMaHoaDon.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaHoaDon.Location = new System.Drawing.Point(167, 31);
             this.txtMaHoaDon.Name = "txtMaHoaDon";
-            this.txtMaHoaDon.Size = new System.Drawing.Size(52, 17);
+            this.txtMaHoaDon.Size = new System.Drawing.Size(12, 17);
             this.txtMaHoaDon.TabIndex = 4;
-            this.txtMaHoaDon.Text = "HD-01";
+            this.txtMaHoaDon.Text = " ";
             // 
             // label6
             // 

@@ -55,6 +55,8 @@
             this.btnHoanThanhPhieuNhap = new DevExpress.XtraEditors.SimpleButton();
             this.btnLapHoaDon = new DevExpress.XtraEditors.SimpleButton();
             this.btnInHoaDon = new DevExpress.XtraEditors.SimpleButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTenKhachHang = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -224,7 +226,7 @@
             this.groupBox2.Controls.Add(this.panel3);
             this.groupBox2.Location = new System.Drawing.Point(15, 16);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(446, 331);
+            this.groupBox2.Size = new System.Drawing.Size(446, 379);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin hóa đơn";
@@ -233,6 +235,8 @@
             // panelThongTin
             // 
             this.panelThongTin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelThongTin.Controls.Add(this.txtTenKhachHang);
+            this.panelThongTin.Controls.Add(this.label1);
             this.panelThongTin.Controls.Add(this.txtChiPhi);
             this.panelThongTin.Controls.Add(this.cbxNhanVien);
             this.panelThongTin.Controls.Add(this.dateNgayBan);
@@ -244,13 +248,13 @@
             this.panelThongTin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelThongTin.Location = new System.Drawing.Point(3, 20);
             this.panelThongTin.Name = "panelThongTin";
-            this.panelThongTin.Size = new System.Drawing.Size(440, 205);
+            this.panelThongTin.Size = new System.Drawing.Size(440, 253);
             this.panelThongTin.TabIndex = 2;
             // 
             // txtChiPhi
             // 
             this.txtChiPhi.AutoSize = true;
-            this.txtChiPhi.Location = new System.Drawing.Point(134, 167);
+            this.txtChiPhi.Location = new System.Drawing.Point(134, 201);
             this.txtChiPhi.Name = "txtChiPhi";
             this.txtChiPhi.Size = new System.Drawing.Size(15, 17);
             this.txtChiPhi.TabIndex = 4;
@@ -258,7 +262,7 @@
             // 
             // cbxNhanVien
             // 
-            this.cbxNhanVien.Location = new System.Drawing.Point(134, 114);
+            this.cbxNhanVien.Location = new System.Drawing.Point(134, 109);
             this.cbxNhanVien.Name = "cbxNhanVien";
             this.cbxNhanVien.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.cbxNhanVien.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
@@ -276,7 +280,7 @@
             // dateNgayBan
             // 
             this.dateNgayBan.EditValue = null;
-            this.dateNgayBan.Location = new System.Drawing.Point(134, 65);
+            this.dateNgayBan.Location = new System.Drawing.Point(134, 62);
             this.dateNgayBan.Name = "dateNgayBan";
             this.dateNgayBan.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.dateNgayBan.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 11F);
@@ -303,7 +307,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 167);
+            this.label6.Location = new System.Drawing.Point(26, 200);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 17);
             this.label6.TabIndex = 3;
@@ -312,7 +316,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 69);
+            this.label5.Location = new System.Drawing.Point(26, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 17);
             this.label5.TabIndex = 2;
@@ -321,11 +325,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 118);
+            this.label4.Location = new System.Drawing.Point(26, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 17);
+            this.label4.Size = new System.Drawing.Size(71, 17);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Nhân viên nhập :";
+            this.label4.Text = "Nhân viên:";
             // 
             // label3
             // 
@@ -342,7 +346,7 @@
             this.panel3.Controls.Add(this.btnLapHoaDon);
             this.panel3.Controls.Add(this.btnInHoaDon);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(3, 225);
+            this.panel3.Location = new System.Drawing.Point(3, 273);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(440, 103);
             this.panel3.TabIndex = 1;
@@ -385,6 +389,22 @@
             this.btnInHoaDon.TabIndex = 6;
             this.btnInHoaDon.Text = "In hóa đơn";
             this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 155);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Khách hàng:";
+            // 
+            // txtTenKhachHang
+            // 
+            this.txtTenKhachHang.Location = new System.Drawing.Point(134, 152);
+            this.txtTenKhachHang.Name = "txtTenKhachHang";
+            this.txtTenKhachHang.Size = new System.Drawing.Size(154, 24);
+            this.txtTenKhachHang.TabIndex = 6;
             // 
             // ucLapPhieuXuat
             // 
@@ -438,5 +458,7 @@
         private DevExpress.XtraEditors.DateEdit dateNgayBan;
         private DevExpress.XtraEditors.LookUpEdit cbxNhanVien;
         private System.Windows.Forms.Label txtChiPhi;
+        private System.Windows.Forms.TextBox txtTenKhachHang;
+        private System.Windows.Forms.Label label1;
     }
 }

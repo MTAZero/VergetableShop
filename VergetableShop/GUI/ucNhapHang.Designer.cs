@@ -32,6 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTongGiaTri = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.dateKetThuc = new DevExpress.XtraEditors.DateEdit();
             this.dateBatDau = new DevExpress.XtraEditors.DateEdit();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,8 +66,6 @@
             this.NhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TongTien = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateKetThuc.Properties.CalendarTimeProperties)).BeginInit();
@@ -120,6 +120,23 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Bộ lọc phiếu nhập";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(97, 27);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(428, 24);
+            this.txtTimKiem.TabIndex = 7;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(27, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 17);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Tím kiếm :";
             // 
             // dateKetThuc
             // 
@@ -337,9 +354,9 @@
             this.txtTongChiPhi.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongChiPhi.Location = new System.Drawing.Point(167, 133);
             this.txtTongChiPhi.Name = "txtTongChiPhi";
-            this.txtTongChiPhi.Size = new System.Drawing.Size(72, 17);
+            this.txtTongChiPhi.Size = new System.Drawing.Size(12, 17);
             this.txtTongChiPhi.TabIndex = 7;
-            this.txtTongChiPhi.Text = "1,500,000";
+            this.txtTongChiPhi.Text = " ";
             // 
             // txtNhanVien
             // 
@@ -347,9 +364,9 @@
             this.txtNhanVien.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhanVien.Location = new System.Drawing.Point(167, 82);
             this.txtNhanVien.Name = "txtNhanVien";
-            this.txtNhanVien.Size = new System.Drawing.Size(117, 17);
+            this.txtNhanVien.Size = new System.Drawing.Size(12, 17);
             this.txtNhanVien.TabIndex = 6;
-            this.txtNhanVien.Text = "Phạm Thị Quỳnh";
+            this.txtNhanVien.Text = " ";
             // 
             // dateNgayBan
             // 
@@ -357,9 +374,9 @@
             this.dateNgayBan.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgayBan.Location = new System.Drawing.Point(499, 31);
             this.dateNgayBan.Name = "dateNgayBan";
-            this.dateNgayBan.Size = new System.Drawing.Size(80, 17);
+            this.dateNgayBan.Size = new System.Drawing.Size(12, 17);
             this.dateNgayBan.TabIndex = 5;
-            this.dateNgayBan.Text = "04/12/2017";
+            this.dateNgayBan.Text = " ";
             // 
             // txtMaPhieuNhap
             // 
@@ -367,9 +384,9 @@
             this.txtMaPhieuNhap.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaPhieuNhap.Location = new System.Drawing.Point(167, 31);
             this.txtMaPhieuNhap.Name = "txtMaPhieuNhap";
-            this.txtMaPhieuNhap.Size = new System.Drawing.Size(52, 17);
+            this.txtMaPhieuNhap.Size = new System.Drawing.Size(12, 17);
             this.txtMaPhieuNhap.TabIndex = 4;
-            this.txtMaPhieuNhap.Text = "HD-01";
+            this.txtMaPhieuNhap.Text = " ";
             // 
             // label6
             // 
@@ -506,23 +523,6 @@
             this.TongTien.Visible = true;
             this.TongTien.VisibleIndex = 3;
             this.TongTien.Width = 146;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 17);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Tím kiếm :";
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(97, 27);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(428, 24);
-            this.txtTimKiem.TabIndex = 7;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // ucNhapHang
             // 
