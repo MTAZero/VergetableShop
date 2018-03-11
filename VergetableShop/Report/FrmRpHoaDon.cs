@@ -43,7 +43,8 @@ namespace BookShop.Report
                     new ReportParameter("MaHoaDon", hd.MAHOADON),
                     new ReportParameter("NgayBan", ((DateTime) hd.NGAY).ToString("dd/MM/yyyy")),
                     new ReportParameter("NhanVienBanHang", db.NHANVIENs.Where(p=>p.ID== hd.NHANVIENID).FirstOrDefault().TEN),
-                    new ReportParameter("TongTien", ((int)hd.TONGTIEN).ToString("N0"))
+                    new ReportParameter("TongTien", ((int)hd.TONGTIEN).ToString("N0")),
+                    new ReportParameter("TenKhachHang",hd.TENKHACHHANG)
                 };
             this.rpViewerHoaDon.LocalReport.SetParameters(listPara);
 
